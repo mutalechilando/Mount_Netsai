@@ -151,6 +151,7 @@
             // dataGridViewSubjects
             // 
             this.dataGridViewSubjects.AutoGenerateColumns = false;
+            this.dataGridViewSubjects.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSubjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.subjectnameDataGridViewTextBoxColumn});
@@ -158,7 +159,7 @@
             this.dataGridViewSubjects.Location = new System.Drawing.Point(763, 88);
             this.dataGridViewSubjects.Name = "dataGridViewSubjects";
             this.dataGridViewSubjects.RowTemplate.Height = 24;
-            this.dataGridViewSubjects.Size = new System.Drawing.Size(240, 150);
+            this.dataGridViewSubjects.Size = new System.Drawing.Size(240, 392);
             this.dataGridViewSubjects.TabIndex = 3;
             // 
             // subjectnameDataGridViewTextBoxColumn
@@ -351,6 +352,7 @@
             // dataGridViewRace
             // 
             this.dataGridViewRace.AutoGenerateColumns = false;
+            this.dataGridViewRace.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewRace.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRace.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.racetypeDataGridViewTextBoxColumn});
@@ -358,7 +360,7 @@
             this.dataGridViewRace.Location = new System.Drawing.Point(741, 93);
             this.dataGridViewRace.Name = "dataGridViewRace";
             this.dataGridViewRace.RowTemplate.Height = 24;
-            this.dataGridViewRace.Size = new System.Drawing.Size(240, 150);
+            this.dataGridViewRace.Size = new System.Drawing.Size(240, 387);
             this.dataGridViewRace.TabIndex = 3;
             // 
             // mount_NetsaiAcadamyDataSet3
@@ -393,6 +395,7 @@
             // dataGridViewPersonType
             // 
             this.dataGridViewPersonType.AutoGenerateColumns = false;
+            this.dataGridViewPersonType.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewPersonType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPersonType.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.persontypeDataGridViewTextBoxColumn});
@@ -400,7 +403,7 @@
             this.dataGridViewPersonType.Location = new System.Drawing.Point(752, 100);
             this.dataGridViewPersonType.Name = "dataGridViewPersonType";
             this.dataGridViewPersonType.RowTemplate.Height = 24;
-            this.dataGridViewPersonType.Size = new System.Drawing.Size(240, 150);
+            this.dataGridViewPersonType.Size = new System.Drawing.Size(240, 380);
             this.dataGridViewPersonType.TabIndex = 3;
             // 
             // mount_NetsaiAcadamyDataSet4
@@ -428,9 +431,9 @@
             this.labelPersonType.AutoSize = true;
             this.labelPersonType.Location = new System.Drawing.Point(752, 63);
             this.labelPersonType.Name = "labelPersonType";
-            this.labelPersonType.Size = new System.Drawing.Size(91, 17);
+            this.labelPersonType.Size = new System.Drawing.Size(110, 17);
             this.labelPersonType.TabIndex = 4;
-            this.labelPersonType.Text = "Person types";
+            this.labelPersonType.Text = "All Person types";
             // 
             // add_subjects_race_types_person_types
             // 

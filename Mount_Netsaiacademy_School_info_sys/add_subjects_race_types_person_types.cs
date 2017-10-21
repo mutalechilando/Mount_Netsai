@@ -49,15 +49,12 @@ namespace Mount_Netsaiacademy_School_info_sys
 
                 this.subjectsTableAdapter.Fill(this.mount_NetsaiAcadamyDataSet2.subjects);
                 txtSubject.Text="";
-                
             }
 
             catch (Exception ex)
             {
 
                 throw new Exception("Execption Transfer of Querry Failed" + ex.Message);
-
-
             }
 
             finally
@@ -94,15 +91,12 @@ namespace Mount_Netsaiacademy_School_info_sys
 
                 this.tbl_raceTableAdapter.Fill(this.mount_NetsaiAcadamyDataSet3.Tbl_race);
                 textRace.Text = "";
-
             }
 
             catch (Exception ex)
             {
 
                 throw new Exception("Execption Transfer of Querry Failed" + ex.Message);
-
-
             }
 
             finally
@@ -126,15 +120,12 @@ namespace Mount_Netsaiacademy_School_info_sys
 
                 this.tbl_person_typeTableAdapter.Fill(this.mount_NetsaiAcadamyDataSet4.Tbl_person_type);
                 txtPersonType.Text = "";
-
             }
 
             catch (Exception ex)
             {
 
                 throw new Exception("Execption Transfer of Querry Failed" + ex.Message);
-
-
             }
 
             finally

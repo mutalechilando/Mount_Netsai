@@ -19,11 +19,6 @@ namespace Mount_Netsaiacademy_School_info_sys
     public partial class Form1 : Form
     {
 
-
-
-
-
-
         public Form1()
         {
             InitializeComponent();
@@ -107,6 +102,14 @@ namespace Mount_Netsaiacademy_School_info_sys
             config.Parent = panel1;
             config.Size = panel1.Size;
             config.Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Login login = new Login();
+            login.ShowDialog();
         }
     }
 }
