@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Mount_NetsaiAcadamyDataSet3" targetNamespace="http://tempuri.org/Mount_NetsaiAcadamyDataSet3.xsd" xmlns:mstns="http://tempuri.org/Mount_NetsaiAcadamyDataSet3.xsd" xmlns="http://tempuri.org/Mount_NetsaiAcadamyDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Mount_NetsaiAcadamyConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Mount_NetsaiAcadamyConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Mount_Netsaiacademy_School_info_sys.Properties.Settings.GlobalReference.Default.Mount_NetsaiAcadamyConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Tbl_raceTableAdapter" GeneratorDataComponentClassName="Tbl_raceTableAdapter" Name="Tbl_race" UserDataComponentName="Tbl_raceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Mount_NetsaiAcadamyConnectionString (Settings)" DbObjectName="Mount_NetsaiAcadamy.dbo.Tbl_race" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT race_type FROM dbo.Tbl_race</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="race_type" DataSetColumn="race_type" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Mount_NetsaiAcadamyDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Mount_NetsaiAcadamyDataSet3" msprop:Generator_UserDSName="Mount_NetsaiAcadamyDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Tbl_race" msprop:Generator_TableClassName="Tbl_raceDataTable" msprop:Generator_TableVarName="tableTbl_race" msprop:Generator_TablePropName="Tbl_race" msprop:Generator_RowDeletingName="Tbl_raceRowDeleting" msprop:Generator_RowChangingName="Tbl_raceRowChanging" msprop:Generator_RowEvHandlerName="Tbl_raceRowChangeEventHandler" msprop:Generator_RowDeletedName="Tbl_raceRowDeleted" msprop:Generator_UserTableName="Tbl_race" msprop:Generator_RowChangedName="Tbl_raceRowChanged" msprop:Generator_RowEvArgName="Tbl_raceRowChangeEvent" msprop:Generator_RowClassName="Tbl_raceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="race_type" msprop:Generator_ColumnVarNameInTable="columnrace_type" msprop:Generator_ColumnPropNameInRow="race_type" msprop:Generator_ColumnPropNameInTable="race_typeColumn" msprop:Generator_UserColumnName="race_type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
