@@ -36,33 +36,55 @@ namespace Mount_Netsaiacademy_School_info_sys
 
         private void BtnADDsub_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(Constr);
-            String Add_Subject = "Add_Subject";
-            SqlCommand cmd = new SqlCommand(Add_Subject,con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Subject", txtSubject.Text.Trim());
-            try
+            if(txtSubject.Text != "")
             {
-                con.Open();
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Subject Added Successfully");
+                SqlConnection con = new SqlConnection(Constr);
 
-                this.subjectsTableAdapter.Fill(this.mount_NetsaiAcadamyDataSet2.subjects);
-                txtSubject.Text="";
+                SqlCommand cmmd = new SqlCommand("select * from Subjects where Subject_name = '" + txtSubject.Text + "'" , con);
+                SqlDataAdapter da = new SqlDataAdapter(cmmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                if (dt.Rows.Count == 0)
+                {
+                    String Add_Subject = "Add_Subject";
+                    SqlCommand cmd = new SqlCommand(Add_Subject, con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Subject", txtSubject.Text.Trim());
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Subject Added Successfully");
+
+                        this.subjectsTableAdapter.Fill(this.mount_NetsaiAcadamyDataSet2.subjects);
+                        txtSubject.Text = "";
+                    }
+
+                    catch (Exception ex)
+                    {
+
+                        throw new Exception("Exception Transfer of Querry Failed" + ex.Message);
+                    }
+
+                    finally
+                    {
+                        con.Close();
+                    }
+
+                }
+
+                else
+                {
+                    MessageBox.Show("This subject already exists!");
+                }
+               
             }
 
-            catch (Exception ex)
+            else
             {
-
-                throw new Exception("Execption Transfer of Querry Failed" + ex.Message);
+                MessageBox.Show("Cannot add an empty string as a subject");
             }
-
-            finally
-            {
-                con.Close();
-            }
-
-           
         }
 
         private void add_subjects_race_types_person_types_Load(object sender, EventArgs e)
@@ -78,61 +100,105 @@ namespace Mount_Netsaiacademy_School_info_sys
 
         private void buttonAddRace_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(Constr);
-            String Add_Race = "Add_Race";
-            SqlCommand cmd = new SqlCommand(Add_Race, con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Race", textRace.Text.Trim());
-            try
+            if(textRace.Text == "")
             {
-                con.Open();
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Race Added Successfully");
-
-                this.tbl_raceTableAdapter.Fill(this.mount_NetsaiAcadamyDataSet3.Tbl_race);
-                textRace.Text = "";
+                MessageBox.Show("Cannot add an empty string as a race");
             }
 
-            catch (Exception ex)
+            else
             {
+                SqlConnection con = new SqlConnection(Constr);
 
-                throw new Exception("Execption Transfer of Querry Failed" + ex.Message);
-            }
+                SqlCommand cmmd = new SqlCommand("select * from Tbl_race where race_type = '" + textRace.Text + "'", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
 
-            finally
-            {
-                con.Close();
-            }
+                if (dt.Rows.Count == 0)
+                {
+                    String Add_Race = "Add_Race";
+                    SqlCommand cmd = new SqlCommand(Add_Race, con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Race", textRace.Text.Trim());
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Race Added Successfully");
+
+                        this.tbl_raceTableAdapter.Fill(this.mount_NetsaiAcadamyDataSet3.Tbl_race);
+                        textRace.Text = "";
+                    }
+
+                    catch (Exception ex)
+                    {
+
+                        throw new Exception("Exception Transfer of Querry Failed" + ex.Message);
+                    }
+
+                    finally
+                    {
+                        con.Close();
+                    }
+                }
+
+                else
+                {
+                    MessageBox.Show("This race already exists!");
+                }
+            }            
         }
 
         private void buttonAddPersonType_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(Constr);
-            String Add_Person_Type = "Add_Person_Type";
-            SqlCommand cmd = new SqlCommand(Add_Person_Type, con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@person_type", txtPersonType.Text.Trim());
-            try
+            if (txtPersonType.Text == "")
             {
-                con.Open();
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Person Type Added Successfully");
-
-                this.tbl_person_typeTableAdapter.Fill(this.mount_NetsaiAcadamyDataSet4.Tbl_person_type);
-                txtPersonType.Text = "";
+                MessageBox.Show("Cannot add an empty string as a Person type");
             }
 
-            catch (Exception ex)
+            else
             {
+                SqlConnection con = new SqlConnection(Constr);
 
-                throw new Exception("Execption Transfer of Querry Failed" + ex.Message);
+
+                SqlCommand cmmd = new SqlCommand("select * from Tbl_person_type where person_type = '" + txtPersonType.Text + "'", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                if (dt.Rows.Count == 0)
+                {
+                    String Add_Person_Type = "Add_Person_Type";
+                    SqlCommand cmd = new SqlCommand(Add_Person_Type, con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@person_type", txtPersonType.Text.Trim());
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Person Type Added Successfully");
+
+                        this.tbl_person_typeTableAdapter.Fill(this.mount_NetsaiAcadamyDataSet4.Tbl_person_type);
+                        txtPersonType.Text = "";
+                    }
+
+                    catch (Exception ex)
+                    {
+
+                        throw new Exception("Exception Transfer of Querry Failed" + ex.Message);
+                    }
+
+                    finally
+                    {
+                        con.Close();
+                    }
+                }
+
+                else
+                {
+                    MessageBox.Show("This person type already exists!");
+                }
             }
-
-            finally
-            {
-                con.Close();
-            }
-
         }
     }
     }
