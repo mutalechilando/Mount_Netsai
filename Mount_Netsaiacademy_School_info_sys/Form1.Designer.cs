@@ -62,8 +62,7 @@
             this.administratorToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1914, 98);
+            this.menuStrip1.Size = new System.Drawing.Size(1436, 93);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -78,7 +77,7 @@
             this.manageStudentToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.manageStudentToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
             this.manageStudentToolStripMenuItem.Name = "manageStudentToolStripMenuItem";
-            this.manageStudentToolStripMenuItem.Size = new System.Drawing.Size(130, 94);
+            this.manageStudentToolStripMenuItem.Size = new System.Drawing.Size(106, 89);
             this.manageStudentToolStripMenuItem.Text = "Manage Student";
             this.manageStudentToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.manageStudentToolStripMenuItem.Click += new System.EventHandler(this.manageStudentToolStripMenuItem_Click);
@@ -88,7 +87,7 @@
             this.registerStudentToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.registerStudentToolStripMenuItem.Image = global::Mount_Netsaiacademy_School_info_sys.Properties.Resources.images;
             this.registerStudentToolStripMenuItem.Name = "registerStudentToolStripMenuItem";
-            this.registerStudentToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
+            this.registerStudentToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.registerStudentToolStripMenuItem.Text = "Register_New_Student";
             this.registerStudentToolStripMenuItem.Click += new System.EventHandler(this.registerStudentToolStripMenuItem_Click);
             // 
@@ -96,7 +95,7 @@
             // 
             this.editStudentRecordsToolStripMenuItem.Image = global::Mount_Netsaiacademy_School_info_sys.Properties.Resources.Student_3_icon2;
             this.editStudentRecordsToolStripMenuItem.Name = "editStudentRecordsToolStripMenuItem";
-            this.editStudentRecordsToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
+            this.editStudentRecordsToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.editStudentRecordsToolStripMenuItem.Text = "Edit_Student_Records";
             this.editStudentRecordsToolStripMenuItem.Click += new System.EventHandler(this.editStudentRecordsToolStripMenuItem_Click);
             // 
@@ -108,20 +107,20 @@
             this.studentPerfomanceToolStripMenuItem.Image = global::Mount_Netsaiacademy_School_info_sys.Properties.Resources.Performance;
             this.studentPerfomanceToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.studentPerfomanceToolStripMenuItem.Name = "studentPerfomanceToolStripMenuItem";
-            this.studentPerfomanceToolStripMenuItem.Size = new System.Drawing.Size(154, 94);
+            this.studentPerfomanceToolStripMenuItem.Size = new System.Drawing.Size(127, 89);
             this.studentPerfomanceToolStripMenuItem.Text = "Student Perfomance";
             this.studentPerfomanceToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // enterStudentsExamPerformanceToolStripMenuItem
             // 
             this.enterStudentsExamPerformanceToolStripMenuItem.Name = "enterStudentsExamPerformanceToolStripMenuItem";
-            this.enterStudentsExamPerformanceToolStripMenuItem.Size = new System.Drawing.Size(310, 26);
+            this.enterStudentsExamPerformanceToolStripMenuItem.Size = new System.Drawing.Size(255, 22);
             this.enterStudentsExamPerformanceToolStripMenuItem.Text = "Enter Students Exam Performance ";
             // 
             // veiwStudeentPerfomanceToolStripMenuItem
             // 
             this.veiwStudeentPerfomanceToolStripMenuItem.Name = "veiwStudeentPerfomanceToolStripMenuItem";
-            this.veiwStudeentPerfomanceToolStripMenuItem.Size = new System.Drawing.Size(310, 26);
+            this.veiwStudeentPerfomanceToolStripMenuItem.Size = new System.Drawing.Size(255, 22);
             this.veiwStudeentPerfomanceToolStripMenuItem.Text = "Veiw Studee=nt Perfomance";
             // 
             // studentsFeesStatusToolStripMenuItem
@@ -131,14 +130,14 @@
             this.studentsFeesStatusToolStripMenuItem.Image = global::Mount_Netsaiacademy_School_info_sys.Properties.Resources._12991670401459277586supervisor;
             this.studentsFeesStatusToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.studentsFeesStatusToolStripMenuItem.Name = "studentsFeesStatusToolStripMenuItem";
-            this.studentsFeesStatusToolStripMenuItem.Size = new System.Drawing.Size(222, 94);
+            this.studentsFeesStatusToolStripMenuItem.Size = new System.Drawing.Size(183, 89);
             this.studentsFeesStatusToolStripMenuItem.Text = "Students Payment Managment";
             this.studentsFeesStatusToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // checkStudentFeesToolStripMenuItem
             // 
             this.checkStudentFeesToolStripMenuItem.Name = "checkStudentFeesToolStripMenuItem";
-            this.checkStudentFeesToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
+            this.checkStudentFeesToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.checkStudentFeesToolStripMenuItem.Text = "Check Student Fees";
             // 
             // humanResourseToolStripMenuItem
@@ -149,7 +148,7 @@
             this.humanResourseToolStripMenuItem.Image = global::Mount_Netsaiacademy_School_info_sys.Properties.Resources.download;
             this.humanResourseToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.humanResourseToolStripMenuItem.Name = "humanResourseToolStripMenuItem";
-            this.humanResourseToolStripMenuItem.Size = new System.Drawing.Size(132, 94);
+            this.humanResourseToolStripMenuItem.Size = new System.Drawing.Size(109, 89);
             this.humanResourseToolStripMenuItem.Text = "Human Resourse";
             this.humanResourseToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.humanResourseToolStripMenuItem.Click += new System.EventHandler(this.humanResourseToolStripMenuItem_Click);
@@ -160,26 +159,26 @@
             this.registerEmployeeToolStripMenuItem,
             this.editEployeeRecordToolStripMenuItem});
             this.employeeManagmentToolStripMenuItem.Name = "employeeManagmentToolStripMenuItem";
-            this.employeeManagmentToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
+            this.employeeManagmentToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.employeeManagmentToolStripMenuItem.Text = "Employee Managment";
             // 
             // registerEmployeeToolStripMenuItem
             // 
             this.registerEmployeeToolStripMenuItem.Name = "registerEmployeeToolStripMenuItem";
-            this.registerEmployeeToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.registerEmployeeToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.registerEmployeeToolStripMenuItem.Text = "Register Employee";
             this.registerEmployeeToolStripMenuItem.Click += new System.EventHandler(this.registerEmployeeToolStripMenuItem_Click);
             // 
             // editEployeeRecordToolStripMenuItem
             // 
             this.editEployeeRecordToolStripMenuItem.Name = "editEployeeRecordToolStripMenuItem";
-            this.editEployeeRecordToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.editEployeeRecordToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.editEployeeRecordToolStripMenuItem.Text = "Edit Eployee Record";
             // 
             // leaveApplicationToolStripMenuItem
             // 
             this.leaveApplicationToolStripMenuItem.Name = "leaveApplicationToolStripMenuItem";
-            this.leaveApplicationToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
+            this.leaveApplicationToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.leaveApplicationToolStripMenuItem.Text = "Leave Application";
             // 
             // administratorToolStripMenuItem
@@ -190,37 +189,38 @@
             this.administratorToolStripMenuItem.Image = global::Mount_Netsaiacademy_School_info_sys.Properties.Resources._13_setting_configure_repair_support_optimization_google_512;
             this.administratorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.administratorToolStripMenuItem.Name = "administratorToolStripMenuItem";
-            this.administratorToolStripMenuItem.Size = new System.Drawing.Size(112, 94);
+            this.administratorToolStripMenuItem.Size = new System.Drawing.Size(92, 89);
             this.administratorToolStripMenuItem.Text = "Administrator";
             this.administratorToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // createUsersToolStripMenuItem
             // 
             this.createUsersToolStripMenuItem.Name = "createUsersToolStripMenuItem";
-            this.createUsersToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.createUsersToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.createUsersToolStripMenuItem.Text = "Create_Users";
+            this.createUsersToolStripMenuItem.Click += new System.EventHandler(this.createUsersToolStripMenuItem_Click);
             // 
             // configurationsToolStripMenuItem
             // 
             this.configurationsToolStripMenuItem.Name = "configurationsToolStripMenuItem";
-            this.configurationsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.configurationsToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.configurationsToolStripMenuItem.Text = "Configurations";
             this.configurationsToolStripMenuItem.Click += new System.EventHandler(this.configurationsToolStripMenuItem_Click);
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Location = new System.Drawing.Point(0, 118);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 96);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2504, 904);
+            this.panel1.Size = new System.Drawing.Size(1879, 735);
             this.panel1.TabIndex = 1;
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(1272, 29);
+            this.btnLogout.Location = new System.Drawing.Point(954, 24);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 32);
+            this.btnLogout.Size = new System.Drawing.Size(56, 26);
             this.btnLogout.TabIndex = 2;
             this.btnLogout.Text = "Log out";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -228,14 +228,13 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1914, 1038);
+            this.ClientSize = new System.Drawing.Size(1436, 843);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Mount_Netsai DashBoard";
             this.menuStrip1.ResumeLayout(false);

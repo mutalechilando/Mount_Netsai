@@ -51,6 +51,12 @@
     <Compile Include="add_subjects_race_types_person_types.Designer.cs">
       <DependentUpon>add_subjects_race_types_person_types.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateUser.Designer.cs">
+      <DependentUpon>CreateUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Edit_Student.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,14 +108,17 @@
     <Compile Include="register_employee.Designer.cs">
       <DependentUpon>register_employee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Register_Student.cs">
+    <Compile Include="StudentRegistration .cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Register_Student.Designer.cs">
-      <DependentUpon>Register_Student.cs</DependentUpon>
+    <Compile Include="StudentRegistration .Designer.cs">
+      <DependentUpon>StudentRegistration .cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="add_subjects_race_types_person_types.resx">
       <DependentUpon>add_subjects_race_types_person_types.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateUser.resx">
+      <DependentUpon>CreateUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edit_Student.resx">
       <DependentUpon>Edit_Student.cs</DependentUpon>
@@ -133,8 +142,8 @@
     <EmbeddedResource Include="register_employee.resx">
       <DependentUpon>register_employee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Register_Student.resx">
-      <DependentUpon>Register_Student.cs</DependentUpon>
+    <EmbeddedResource Include="StudentRegistration .resx">
+      <DependentUpon>StudentRegistration .cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Mount_NetsaiAcadamyDataSet.xsc">
       <DependentUpon>Mount_NetsaiAcadamyDataSet.xsd</DependentUpon>
@@ -248,6 +257,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lock.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

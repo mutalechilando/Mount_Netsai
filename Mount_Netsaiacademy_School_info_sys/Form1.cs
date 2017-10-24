@@ -12,7 +12,7 @@ using System.Globalization;
 
 namespace Mount_Netsaiacademy_School_info_sys
 {
-    
+
 
 
 
@@ -27,7 +27,7 @@ namespace Mount_Netsaiacademy_School_info_sys
         private void registerStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
-            Register_Student regstud = new Register_Student(); 
+            StudentRegistration regstud = new StudentRegistration();
             regstud.TopLevel = false;
             regstud.Dock = DockStyle.Fill;
             regstud.Parent = panel1;
@@ -39,7 +39,7 @@ namespace Mount_Netsaiacademy_School_info_sys
             regstud.MdiParent = this;
             regstud.Show();
              * */
-             
+
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -59,7 +59,7 @@ namespace Mount_Netsaiacademy_School_info_sys
 
         private void editStudentRecordsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
             /*
             this.IsMdiContainer = true;
             Edit_Student Editstud = new Edit_Student();
@@ -110,6 +110,19 @@ namespace Mount_Netsaiacademy_School_info_sys
 
             Login login = new Login();
             login.ShowDialog();
+        }
+
+        private void createUsersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            {
+                panel1.Controls.Clear();
+                CreateUser create = new CreateUser();
+                create.TopLevel = false;
+                create.Dock = DockStyle.Fill;
+                create.Parent = panel1;
+                create.Size = panel1.Size;
+                create.Show();
+            }
         }
     }
 }

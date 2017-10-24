@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Mount_Netsaiacademy_School_info_sys
 {
-    public partial class Edit_Student : Form
+    public partial class CreateUser : Form
     {
-        public Edit_Student()
+        public CreateUser()
         {
             InitializeComponent();
         }
