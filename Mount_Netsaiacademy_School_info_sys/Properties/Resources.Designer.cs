@@ -83,6 +83,26 @@ namespace Mount_Netsaiacademy_School_info_sys.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _510226342 {
+            get {
+                object obj = ResourceManager.GetObject("510226342", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5102263421 {
+            get {
+                object obj = ResourceManager.GetObject("5102263421", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _636117043734600776181716352_icon_teachers {
             get {
                 object obj = ResourceManager.GetObject("636117043734600776181716352_icon_teachers", resourceCulture);

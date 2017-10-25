@@ -52,3 +52,4 @@ C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\School_System\Mount_Net
 C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\School_System\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.csproj.GenerateResource.Cache
 C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\School_System\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.StudentRegistration.resources
 C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\School_System\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.CreateUser.resources
+C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\School_System\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.Class_Managment.resources

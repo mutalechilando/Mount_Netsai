@@ -46,7 +46,6 @@
             this.dTp_enroll = new System.Windows.Forms.DateTimePicker();
             this.cmbrace = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dtp_date_of_birth = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -60,6 +59,9 @@
             this.txtStudentNumber = new System.Windows.Forms.TextBox();
             this.txtlastname = new System.Windows.Forms.TextBox();
             this.txtfname = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -78,6 +80,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.txtemptype);
             this.groupBox2.Controls.Add(this.txtstudentstatus);
             this.groupBox2.Controls.Add(this.groupBox3);
@@ -133,7 +137,7 @@
             this.groupBox3.Controls.Add(this.button5);
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.btnregister);
-            this.groupBox3.Location = new System.Drawing.Point(77, 599);
+            this.groupBox3.Location = new System.Drawing.Point(83, 645);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(808, 72);
             this.groupBox3.TabIndex = 46;
@@ -254,6 +258,7 @@
             this.cmbrace.Size = new System.Drawing.Size(209, 21);
             this.cmbrace.TabIndex = 37;
             this.cmbrace.ValueMember = "race_type";
+            this.cmbrace.SelectedIndexChanged += new System.EventHandler(this.cmbrace_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -265,17 +270,6 @@
             this.button1.Text = "Upoad";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::Mount_Netsaiacademy_School_info_sys.Properties.Resources.student;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(670, 49);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 198);
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
             // 
             // dtp_date_of_birth
             // 
@@ -390,6 +384,37 @@
             this.txtfname.TabIndex = 19;
             this.txtfname.TextChanged += new System.EventHandler(this.txtfname_TextChanged_1);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(134, 535);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(230, 21);
+            this.comboBox1.TabIndex = 49;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(80, 538);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(39, 13);
+            this.label11.TabIndex = 50;
+            this.label11.Text = "Grade:";
+            this.label11.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::Mount_Netsaiacademy_School_info_sys.Properties.Resources.student;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(670, 49);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(204, 198);
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
             // StudentRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,6 +468,8 @@
         private System.Windows.Forms.TextBox txtStudentNumber;
         private System.Windows.Forms.TextBox txtlastname;
         private System.Windows.Forms.TextBox txtfname;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBox1;
 
 
     }

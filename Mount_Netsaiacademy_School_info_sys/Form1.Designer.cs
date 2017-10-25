@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.manageStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editStudentRecordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,8 +47,7 @@
             this.administratorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configurationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLogout = new System.Windows.Forms.Button();
+            this.classManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,10 +63,30 @@
             this.administratorToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1436, 93);
+            this.menuStrip1.Size = new System.Drawing.Size(1524, 93);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Location = new System.Drawing.Point(0, 96);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1879, 805);
+            this.panel1.TabIndex = 1;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogout.Image = global::Mount_Netsaiacademy_School_info_sys.Properties.Resources._5102263421;
+            this.btnLogout.Location = new System.Drawing.Point(1432, 20);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(53, 53);
+            this.btnLogout.TabIndex = 2;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // manageStudentToolStripMenuItem
             // 
@@ -87,7 +108,7 @@
             this.registerStudentToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.registerStudentToolStripMenuItem.Image = global::Mount_Netsaiacademy_School_info_sys.Properties.Resources.images;
             this.registerStudentToolStripMenuItem.Name = "registerStudentToolStripMenuItem";
-            this.registerStudentToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.registerStudentToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.registerStudentToolStripMenuItem.Text = "Register_New_Student";
             this.registerStudentToolStripMenuItem.Click += new System.EventHandler(this.registerStudentToolStripMenuItem_Click);
             // 
@@ -95,7 +116,7 @@
             // 
             this.editStudentRecordsToolStripMenuItem.Image = global::Mount_Netsaiacademy_School_info_sys.Properties.Resources.Student_3_icon2;
             this.editStudentRecordsToolStripMenuItem.Name = "editStudentRecordsToolStripMenuItem";
-            this.editStudentRecordsToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.editStudentRecordsToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.editStudentRecordsToolStripMenuItem.Text = "Edit_Student_Records";
             this.editStudentRecordsToolStripMenuItem.Click += new System.EventHandler(this.editStudentRecordsToolStripMenuItem_Click);
             // 
@@ -185,7 +206,8 @@
             // 
             this.administratorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.createUsersToolStripMenuItem,
-            this.configurationsToolStripMenuItem});
+            this.configurationsToolStripMenuItem,
+            this.classManagementToolStripMenuItem});
             this.administratorToolStripMenuItem.Image = global::Mount_Netsaiacademy_School_info_sys.Properties.Resources._13_setting_configure_repair_support_optimization_google_512;
             this.administratorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.administratorToolStripMenuItem.Name = "administratorToolStripMenuItem";
@@ -207,30 +229,18 @@
             this.configurationsToolStripMenuItem.Text = "Configurations";
             this.configurationsToolStripMenuItem.Click += new System.EventHandler(this.configurationsToolStripMenuItem_Click);
             // 
-            // panel1
+            // classManagementToolStripMenuItem
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Location = new System.Drawing.Point(0, 96);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1879, 735);
-            this.panel1.TabIndex = 1;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Location = new System.Drawing.Point(954, 24);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(56, 26);
-            this.btnLogout.TabIndex = 2;
-            this.btnLogout.Text = "Log out";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.classManagementToolStripMenuItem.Name = "classManagementToolStripMenuItem";
+            this.classManagementToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.classManagementToolStripMenuItem.Text = "Class Management";
+            this.classManagementToolStripMenuItem.Click += new System.EventHandler(this.classManagementToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1436, 843);
+            this.ClientSize = new System.Drawing.Size(1524, 913);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -265,6 +275,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripMenuItem configurationsToolStripMenuItem;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.ToolStripMenuItem classManagementToolStripMenuItem;
     }
 }
 

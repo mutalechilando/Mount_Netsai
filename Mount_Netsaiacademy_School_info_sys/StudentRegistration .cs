@@ -32,7 +32,7 @@ namespace Mount_Netsaiacademy_School_info_sys
 
         private void StudentRegistration_Load(object sender, EventArgs e)
         {
-
+            ///race pull
             SqlConnection con = new SqlConnection(Constr);
             txtStudentNumber.Text = randomString(10);
 
@@ -244,6 +244,11 @@ namespace Mount_Netsaiacademy_School_info_sys
 
 
             }
+
+        }
+
+        private void cmbrace_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

@@ -114,7 +114,7 @@ namespace Mount_Netsaiacademy_School_info_sys
 
         private void createUsersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            {
+            
                 panel1.Controls.Clear();
                 CreateUser create = new CreateUser();
                 create.TopLevel = false;
@@ -122,7 +122,21 @@ namespace Mount_Netsaiacademy_School_info_sys
                 create.Parent = panel1;
                 create.Size = panel1.Size;
                 create.Show();
-            }
+            
+        }
+
+        private void classManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+                panel1.Controls.Clear();
+                Class_Managment createClass = new Class_Managment();
+                createClass.TopLevel = false;
+                createClass.Dock = DockStyle.Fill;
+                createClass.Parent = panel1;
+                createClass.Size = panel1.Size;
+                createClass.Show();
+            
+
         }
     }
 }
