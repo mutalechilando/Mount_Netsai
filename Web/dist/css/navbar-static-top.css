@@ -17,8 +17,86 @@ body {
   text-align:center!important;
 }
 
-/**/
+.navbar {
+  margin-bottom: 0px!important; 
+}
+.navbar-default {
+    background-color:#FFF !important;
+    border-top:none!important;
+    border-right:none!important;
+    border-left:none!important;
+    border-bottom:none!important;
+               
+}
+.navbar-items{
+    background-color:#941215!important;
+    color:#FFF!important;
+}
+.navbar-items a:link,
 
+.navbar-items a:visited{
+    color:#FFF!important;
+    font-weight:bold;
+        font-size: 15px;
+        letter-spacing: 1px;
+        margin-right:10px;
+     font-family: 'Droid Serif', serif!important;
+}
+
+.navbar-items a:active,.navbar-items a:hover{
+    color:#DD5F07!important;
+    font-weight:bold;
+        font-size: 15px;
+     font-family: 'Droid Serif', serif!important;
+}
+h1 {
+    font-family: 'Oswald', sans-serif!important;
+    font-weight: 700;
+    line-height: 51px;
+    text-transform: uppercase;
+    margin: 0 0 23px 0;
+    }
+h2 {
+    font-family: 'Droid Serif', serif!important;
+    line-height: 23px;
+    margin: 0 0 23px 0;
+    }
+p {
+    font-family: 'Droid Serif', serif!important;
+    font-size: 15px;
+    line-height: 23px;
+    margin: 0 0 23px 0;
+    }
+.form-control {
+    border: none !important;
+    margin-bottom: 10px!important;
+}
+/*section*/
+.footer
+{
+  padding-top:40px !important;
+  padding-bottom:30px !important;
+  background-color:#252829!important;
+/*  background-color:#252E33!important;*/
+  width:100%!important;
+  color:#FFF!important;
+}
+.contact
+{
+  padding-top:40px !important;
+  padding-bottom:30px !important;
+  background-color: #D65B07!important;
+  width:100%!important;
+  color:#FFF!important;
+
+}
+.about{
+  padding-top:40px !important;
+  padding-bottom:30px !important;
+  background-color: #FCFDFE!important;
+  width:100%!important;
+  color:#333!important;
+}
 /* Carousel Styles */
 
 .carousel-indicators .active {
@@ -73,7 +151,7 @@ body {
 
 .carousel-control.left span,
 .carousel-control.right span {
-  background-color: #000;
+  /*background-color: #000;*/
 }
 
 .carousel-control.left span:hover,
