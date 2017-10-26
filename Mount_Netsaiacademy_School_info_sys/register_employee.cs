@@ -220,6 +220,13 @@ namespace Mount_Netsaiacademy_School_info_sys
                 cmd.Parameters.AddWithValue("@Student_enrollmentdate", DBNull.Value);
                 cmd.Parameters.AddWithValue("@student_status", DBNull.Value);
                 cmd.Parameters.AddWithValue("@student_picture", new byte[0]);
+                cmd.Parameters.AddWithValue("@Student_Grade", DBNull.Value);
+                cmd.Parameters.AddWithValue("@class_amount", DBNull.Value);
+                cmd.Parameters.AddWithValue("@class_teacher", DBNull.Value);
+                cmd.Parameters.AddWithValue("@class_year", DBNull.Value);
+                cmd.Parameters.AddWithValue("@Class_id", DBNull.Value);
+           
+               
 
                 cmd.Parameters.AddWithValue("@student_number", DBNull.Value);
 

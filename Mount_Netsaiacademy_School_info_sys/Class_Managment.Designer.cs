@@ -137,7 +137,7 @@
             this.btnssign.TabIndex = 0;
             this.btnssign.Text = "Assign";
             this.btnssign.UseVisualStyleBackColor = true;
-            this.btnssign.Click += new System.EventHandler(this.button1_Click);
+            this.btnssign.Click += new System.EventHandler(this.btnssign_Click);
             // 
             // cmbyear
             // 
