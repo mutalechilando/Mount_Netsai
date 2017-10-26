@@ -60,6 +60,7 @@ h2 {
     font-family: 'Droid Serif', serif!important;
     line-height: 23px;
     margin: 0 0 23px 0;
+    letter-spacing: 1px;
     }
 p {
     font-family: 'Droid Serif', serif!important;
@@ -71,15 +72,27 @@ p {
     border: none !important;
     margin-bottom: 10px!important;
 }
+#landingContainer {
+  background-color:#000;
+  background-image: url('../img/bg-slide-one-overlay.jpg');
+}
+.text-spacer-top-50
+{
+  margin-top:200px!important;
+}
 /*section*/
 .footer
 {
   padding-top:40px !important;
   padding-bottom:30px !important;
-  background-color:#252829!important;
+  background-color:#282828!important;
 /*  background-color:#252E33!important;*/
   width:100%!important;
   color:#FFF!important;
+}
+.footer a:link,.footer a:visited,.footer a:hover
+{
+   color:#DD5F07!important;
 }
 .contact
 {
@@ -90,6 +103,11 @@ p {
   color:#FFF!important;
 
 }
+.contact a:link,.contact a:visited,.contact a:hover
+{
+   color:#FFF!important;
+   text-decoration: underline!important;
+}
 .about{
   padding-top:40px !important;
   padding-bottom:30px !important;
@@ -97,6 +115,28 @@ p {
   width:100%!important;
   color:#333!important;
 }
+
+.class-explainer{
+   color:#565656;
+   padding-top:20px;
+   padding-bottom:20px;
+   font-size:16px;
+   height:250px;
+   background-color: #E4E4E6;
+   line-height: 2;
+}
+
+.why-banner{
+   background-color: #2980b9;
+   color:#FFF;
+   padding-top:20px;
+   padding-bottom:20px;
+   
+   height:250px;
+   font-size:16px;
+   line-height: 2;
+}
+
 /* Carousel Styles */
 
 .carousel-indicators .active {
@@ -104,8 +144,10 @@ p {
 }
 
 .carousel-inner img {
-  width: 100%;
-  max-height: 460px
+/*  width: 100%;*/
+  width: 65%; 
+  margin: auto;
+  max-height: 500px!important;
 }
 
 .carousel-control {
