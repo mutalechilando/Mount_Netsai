@@ -35,6 +35,10 @@ namespace Mount_Netsaiacademy_School_info_sys
 
         private void Class_Managment_Load(object sender, EventArgs e)
         {
+            btnssign.Enabled = true;
+            Btnupdate.Enabled = false;
+            btndelete.Enabled = false;
+
             SqlConnection conn = new SqlConnection(Constr);
             SqlCommand Cmd = new SqlCommand("class_grid", conn);
             Cmd.CommandType = CommandType.StoredProcedure;
@@ -119,46 +123,72 @@ namespace Mount_Netsaiacademy_School_info_sys
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnssign_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(Constr);
-            String Assign_class = "assign_class";
-            SqlCommand cmd = new SqlCommand(Assign_class, con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@grade", cmbgrade.Text.Trim());
-            cmd.Parameters.AddWithValue("@class_year", cmbyear.Text.Trim());
-            cmd.Parameters.AddWithValue("@suffix ", txtSuffix.Text.Trim());
-            cmd.Parameters.AddWithValue("@amount", txtamount.Text.Trim());
-            cmd.Parameters.AddWithValue("@classTeacher", cmbteacher.Text.Trim());
-
-
-
-            try
+            if (cmbgrade.Text == "")
             {
-                con.Open();
-
-
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Mr / mrs '" + cmbteacher.Text + "'has been Assigned to class '" + cmbgrade.Text + "' '" + txtSuffix.Text + "' Year '" + cmbyear.Text + "' Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cmbgrade.Text = "";
-                cmbyear.Text = "";
-                txtSuffix.Text = "";
-                txtamount.Text = "";
-                cmbteacher.Text = "";
+                MessageBox.Show("Please select a Valid grade!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            catch (Exception ex)
+            else if (cmbyear.Text == "")
             {
-
-                throw new Exception("Execption Transfer of Querry Failed" + ex.Message);
-
-
+                MessageBox.Show("Please select a Valid class year!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            finally
+            else if (cmbteacher.Text == "")
             {
-                con.Close();
+                MessageBox.Show("Please select a Teacher to be assigned to this class!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            else
+            {
+                SqlConnection con = new SqlConnection(Constr);
+                String Assign_class = "assign_class";
+                SqlCommand cmd = new SqlCommand(Assign_class, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@grade", cmbgrade.Text.Trim());
+                cmd.Parameters.AddWithValue("@class_year", cmbyear.Text.Trim());
+                cmd.Parameters.AddWithValue("@suffix ", txtSuffix.Text.Trim());
+                cmd.Parameters.AddWithValue("@amount", txtamount.Text.Trim());
+                cmd.Parameters.AddWithValue("@classTeacher", cmbteacher.Text.Trim());
+
+
+
+                try
+                {
+                    con.Open();
+
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Mr / mrs '" + cmbteacher.Text + "'has been Assigned to class '" + cmbgrade.Text + "' '" + txtSuffix.Text + "' Year '" + cmbyear.Text + "' Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cmbgrade.Text = "";
+                    cmbyear.Text = "";
+                    txtSuffix.Text = "";
+                    txtamount.Text = "";
+                    cmbteacher.Text = "";
+
+                    SqlCommand Cmd = new SqlCommand("class_grid", con);
+                    Cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataAdapter da = new SqlDataAdapter(Cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    classgrid.DataSource = dt;
+                }
+
+                catch (Exception ex)
+                {
+
+                    throw new Exception("Execption Transfer of Querry Failed" + ex.Message);
+
+
+                }
+
+                finally
+                {
+                    con.Close();
+                }
+            }
+
         }
 
         private void classgrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -167,13 +197,19 @@ namespace Mount_Netsaiacademy_School_info_sys
         }
         private void dataGridViewEmployees_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
+
             if (classgrid.SelectedRows.Count > 0) // make sure user select at least 1 row 
             {
+                //btnssign.Enabled = false;
+                Btnupdate.Enabled = true;
+                btndelete.Enabled = true;
+
                 string id = classgrid.SelectedRows[0].Cells[0].Value + string.Empty;
                 string grade = classgrid.SelectedRows[0].Cells[2].Value + string.Empty;
                 string year = classgrid.SelectedRows[0].Cells[1].Value + string.Empty;
-                string amount_fee = classgrid.SelectedRows[0].Cells[4].Value + string.Empty;
-                string suffix = classgrid.SelectedRows[0].Cells[5].Value + string.Empty;
+                string amount_fee = classgrid.SelectedRows[0].Cells[5].Value + string.Empty;
+                string suffix = classgrid.SelectedRows[0].Cells[3].Value + string.Empty;
+                string teacher = classgrid.SelectedRows[0].Cells[4].Value + string.Empty;
 
 
                 cmbyear.Text = year;
@@ -181,47 +217,75 @@ namespace Mount_Netsaiacademy_School_info_sys
                 txtamount.Text = amount_fee;
                 txtSuffix.Text = suffix;
                 txtclass_id.Text = id;
+                cmbteacher.Text = teacher;
             }
 
         }
 
         private void Btnupdate_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(Constr);
-            String Update_class = "Update_class";
-            SqlCommand cmd = new SqlCommand(Update_class, con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@classiD", txtclass_id.Text.Trim());
-            cmd.Parameters.AddWithValue("@grade", cmbgrade.Text.Trim());
-            cmd.Parameters.AddWithValue("@class_year", cmbyear.Text.Trim());
-            cmd.Parameters.AddWithValue("@suffix ", txtSuffix.Text.Trim());
-            cmd.Parameters.AddWithValue("@amount", txtamount.Text.Trim());
-            cmd.Parameters.AddWithValue("@classTeacher", cmbteacher.Text.Trim());
-            try
+
+            if (cmbgrade.Text == "")
             {
-                con.Open();
-
-
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Mr / mrs '" + cmbteacher.Text + "'has been Re-Assigned to class '" + cmbgrade.Text + "' '" + txtSuffix.Text + "' Year '" + cmbyear.Text + "' Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cmbgrade.Text = "";
-                cmbyear.Text = "";
-                txtSuffix.Text = "";
-                txtamount.Text = "";
-                cmbteacher.Text = "";
+                MessageBox.Show("Please select a Valid grade!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            catch (Exception ex)
+            else if (cmbyear.Text == "")
             {
-
-                throw new Exception("Execption Transfer of Querry Failed" + ex.Message);
-
-
+                MessageBox.Show("Please select a Valid class year!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            finally
+            else if (cmbteacher.Text == "")
             {
-                con.Close();
+                MessageBox.Show("Please select a Teacher to be assigned to this class!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            else
+            {
+                SqlConnection con = new SqlConnection(Constr);
+                String Update_class = "Update_class";
+                SqlCommand cmd = new SqlCommand(Update_class, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@classiD", txtclass_id.Text.Trim());
+                cmd.Parameters.AddWithValue("@grade", cmbgrade.Text.Trim());
+                cmd.Parameters.AddWithValue("@class_year", cmbyear.Text.Trim());
+                cmd.Parameters.AddWithValue("@suffix ", txtSuffix.Text.Trim());
+                cmd.Parameters.AddWithValue("@amount", txtamount.Text.Trim());
+                cmd.Parameters.AddWithValue("@classTeacher", cmbteacher.Text.Trim());
+                try
+                {
+                    con.Open();
+
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Mr / mrs '" + cmbteacher.Text + "'has been Re-Assigned to class '" + cmbgrade.Text + "' '" + txtSuffix.Text + "' Year '" + cmbyear.Text + "' Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cmbgrade.Text = "";
+                    cmbyear.Text = "";
+                    txtSuffix.Text = "";
+                    txtamount.Text = "";
+                    cmbteacher.Text = "";
+
+                    SqlCommand Cmd = new SqlCommand("class_grid", con);
+                    Cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataAdapter da = new SqlDataAdapter(Cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    classgrid.DataSource = dt;
+                }
+
+                catch (Exception ex)
+                {
+
+                    throw new Exception("Execption Transfer of Querry Failed" + ex.Message);
+
+
+                }
+
+                finally
+                {
+                    con.Close();
+                }
+
             }
 
         }
@@ -232,26 +296,33 @@ namespace Mount_Netsaiacademy_School_info_sys
             String Deletec_class = "Delete_class ";
             SqlCommand cmd = new SqlCommand(Deletec_class, con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@class_id", txtclass_id.Text.Trim());     
+            cmd.Parameters.AddWithValue("@class_id", txtclass_id.Text.Trim());
             try
             {
                 con.Open();
 
 
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Mr / mrs '" + cmbteacher.Text + "'has been Deleted from class '" + cmbgrade.Text + "' '" + txtSuffix.Text + "' Year '" + cmbyear.Text + "' Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cmbgrade.Text = "";
-                cmbyear.Text = "";
-                txtSuffix.Text = "";
-                txtamount.Text = "";
-                cmbteacher.Text = "";
 
-                SqlConnection conn = new SqlConnection(Constr);
-                SqlCommand Cmd = new SqlCommand("class_grid", conn);
-                Cmd.CommandType = CommandType.StoredProcedure;
-                SqlDataAdapter da = new SqlDataAdapter(Cmd);
-                da.Fill(dt);
-                classgrid.DataSource = dt;
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this" + cmbgrade.Text + txtSuffix.Text + "?", "Are you sure", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show("Mr / mrs '" + cmbteacher.Text + "'has been Deleted from class '" + cmbgrade.Text + "' '" + txtSuffix.Text + "' Year '" + cmbyear.Text + "' Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cmbgrade.Text = "";
+                    cmbyear.Text = "";
+                    txtSuffix.Text = "";
+                    txtamount.Text = "";
+                    cmbteacher.Text = "";
+
+                    SqlCommand Cmd = new SqlCommand("class_grid", con);
+                    Cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataAdapter da = new SqlDataAdapter(Cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    classgrid.DataSource = dt;
+                }
+
             }
 
             catch (Exception ex)

@@ -69,8 +69,43 @@ namespace Mount_Netsaiacademy_School_info_sys
                 con.Close();
             }
 
+            //////////////////////////////////////////////////pull grade
+            String pull_subjects = "pullsubjects";
+            SqlCommand cod = new SqlCommand(pull_subjects, con);
+            cod.CommandType = CommandType.StoredProcedure;
 
 
+            try
+            {
+                con.Open();
+                SqlDataReader rd = cod.ExecuteReader();
+                while (rd.Read())
+                {
+
+                    cmbgrade.Items.Add(rd["grade"].ToString());
+
+
+                }
+                rd.Close();
+
+            }
+
+            catch (Exception ex)
+            {
+
+                throw new Exception("Execption Transfer of Querry Failed" + ex.Message);
+
+
+            }
+
+            finally
+            {
+                con.Close();
+            }
+
+
+
+        
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -204,6 +239,11 @@ namespace Mount_Netsaiacademy_School_info_sys
                 cmd.Parameters.AddWithValue("@student_status", "Active");
                 cmd.Parameters.AddWithValue("@student_picture", pic);
                 cmd.Parameters.AddWithValue("@student_number", txtStudentNumber.Text.ToString().Trim());
+                cmd.Parameters.AddWithValue("@Student_Grade", cmbgrade.Text.Trim());
+                cmd.Parameters.AddWithValue("@class_amount", txtamount.Text.Trim());
+                cmd.Parameters.AddWithValue("@class_teacher", txtclassteacher.Text.Trim());
+                cmd.Parameters.AddWithValue("@class_year", txtyear.Text.Trim());
+                cmd.Parameters.AddWithValue("@Class_id", txtclassid.Text.Trim());
 
                 try
                 {
@@ -223,7 +263,10 @@ namespace Mount_Netsaiacademy_School_info_sys
                     dTp_enroll.Text = "";
                     pictureBox1.Image.Dispose();
                     txtStudentNumber.Text = "";
-
+                    txtamount.Text = "";
+                    txtclassid.Text = "";
+                    txtclassteacher.Text = "";
+                    txtyear.Text = "";
                     txtStudentNumber.Text = randomString(10);
 
                 }
@@ -250,6 +293,47 @@ namespace Mount_Netsaiacademy_School_info_sys
         private void cmbrace_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmbgrade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(Constr);
+            String pull_classdetails = "pullclassdetials";
+            SqlCommand cmd = new SqlCommand(pull_classdetails, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@grade", cmbgrade.Text);
+
+            try
+            {
+                con.Open();
+                SqlDataReader rd = cmd.ExecuteReader();
+                 while (rd.Read())
+                {
+
+                    txtamount.Text=rd["fee_amount"].ToString();
+                    txtclassid.Text = rd["class_id"].ToString();
+                    txtyear.Text = rd["class_Year"].ToString();
+                    txtclassteacher.Text = rd["class_teacher"].ToString();
+                  
+
+
+                }
+                rd.Close();
+
+            }
+
+            catch (Exception ex)
+            {
+
+                throw new Exception("Execption Transfer of Querry Failed" + ex.Message);
+
+
+            }
+
+            finally
+            {
+                con.Close();
+            }
         }
     }
 }

@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentRegistration));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cmbgrade = new System.Windows.Forms.ComboBox();
             this.txtemptype = new System.Windows.Forms.TextBox();
             this.txtstudentstatus = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -46,6 +48,7 @@
             this.dTp_enroll = new System.Windows.Forms.DateTimePicker();
             this.cmbrace = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dtp_date_of_birth = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -59,9 +62,13 @@
             this.txtStudentNumber = new System.Windows.Forms.TextBox();
             this.txtlastname = new System.Windows.Forms.TextBox();
             this.txtfname = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtclassteacher = new System.Windows.Forms.TextBox();
+            this.txtclassid = new System.Windows.Forms.TextBox();
+            this.txtamount = new System.Windows.Forms.TextBox();
+            this.txtyear = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -80,8 +87,15 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.txtyear);
+            this.groupBox2.Controls.Add(this.txtamount);
+            this.groupBox2.Controls.Add(this.txtclassid);
+            this.groupBox2.Controls.Add(this.txtclassteacher);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cmbgrade);
             this.groupBox2.Controls.Add(this.txtemptype);
             this.groupBox2.Controls.Add(this.txtstudentstatus);
             this.groupBox2.Controls.Add(this.groupBox3);
@@ -110,9 +124,29 @@
             this.groupBox2.Controls.Add(this.txtfname);
             this.groupBox2.Location = new System.Drawing.Point(6, 19);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(972, 732);
+            this.groupBox2.Size = new System.Drawing.Size(972, 746);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(80, 538);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(39, 13);
+            this.label11.TabIndex = 50;
+            this.label11.Text = "Grade:";
+            // 
+            // cmbgrade
+            // 
+            this.cmbgrade.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cmbgrade.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbgrade.FormattingEnabled = true;
+            this.cmbgrade.Location = new System.Drawing.Point(134, 535);
+            this.cmbgrade.Name = "cmbgrade";
+            this.cmbgrade.Size = new System.Drawing.Size(230, 21);
+            this.cmbgrade.TabIndex = 49;
+            this.cmbgrade.SelectedIndexChanged += new System.EventHandler(this.cmbgrade_SelectedIndexChanged);
             // 
             // txtemptype
             // 
@@ -137,7 +171,7 @@
             this.groupBox3.Controls.Add(this.button5);
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.btnregister);
-            this.groupBox3.Location = new System.Drawing.Point(83, 645);
+            this.groupBox3.Location = new System.Drawing.Point(83, 668);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(808, 72);
             this.groupBox3.TabIndex = 46;
@@ -271,6 +305,17 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::Mount_Netsaiacademy_School_info_sys.Properties.Resources.student;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(670, 49);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(204, 198);
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
             // dtp_date_of_birth
             // 
             this.dtp_date_of_birth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -384,43 +429,68 @@
             this.txtfname.TabIndex = 19;
             this.txtfname.TextChanged += new System.EventHandler(this.txtfname_TextChanged_1);
             // 
-            // comboBox1
+            // txtclassteacher
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(134, 535);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(230, 21);
-            this.comboBox1.TabIndex = 49;
+            this.txtclassteacher.Location = new System.Drawing.Point(601, 570);
+            this.txtclassteacher.Name = "txtclassteacher";
+            this.txtclassteacher.Size = new System.Drawing.Size(310, 20);
+            this.txtclassteacher.TabIndex = 51;
             // 
-            // label11
+            // txtclassid
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(80, 538);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(39, 13);
-            this.label11.TabIndex = 50;
-            this.label11.Text = "Grade:";
-            this.label11.Visible = false;
+            this.txtclassid.Location = new System.Drawing.Point(601, 615);
+            this.txtclassid.Name = "txtclassid";
+            this.txtclassid.Size = new System.Drawing.Size(224, 20);
+            this.txtclassid.TabIndex = 52;
+            this.txtclassid.Visible = false;
             // 
-            // pictureBox1
+            // txtamount
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::Mount_Netsaiacademy_School_info_sys.Properties.Resources.student;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(670, 49);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 198);
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
+            this.txtamount.Location = new System.Drawing.Point(134, 574);
+            this.txtamount.Name = "txtamount";
+            this.txtamount.Size = new System.Drawing.Size(224, 20);
+            this.txtamount.TabIndex = 53;
+            // 
+            // txtyear
+            // 
+            this.txtyear.Location = new System.Drawing.Point(134, 619);
+            this.txtyear.Name = "txtyear";
+            this.txtyear.Size = new System.Drawing.Size(224, 20);
+            this.txtyear.TabIndex = 54;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(80, 577);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(46, 13);
+            this.label12.TabIndex = 55;
+            this.label12.Text = "Amount:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(94, 622);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(32, 13);
+            this.label13.TabIndex = 56;
+            this.label13.Text = "Year:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(517, 574);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(78, 13);
+            this.label14.TabIndex = 57;
+            this.label14.Text = "Class Teacher:";
             // 
             // StudentRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1018, 793);
+            this.ClientSize = new System.Drawing.Size(1018, 796);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StudentRegistration";
@@ -469,7 +539,14 @@
         private System.Windows.Forms.TextBox txtlastname;
         private System.Windows.Forms.TextBox txtfname;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbgrade;
+        private System.Windows.Forms.TextBox txtclassid;
+        private System.Windows.Forms.TextBox txtclassteacher;
+        private System.Windows.Forms.TextBox txtyear;
+        private System.Windows.Forms.TextBox txtamount;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
 
 
     }
