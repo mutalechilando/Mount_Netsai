@@ -78,10 +78,10 @@ C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\New folder (2)\Mount_Ne
 C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\New folder (2)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.Class_Managment.resources
 C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\New folder (2)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.CreateUser.resources
 C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\New folder (2)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.Edit_Student.resources
-C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\New folder (2)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.Form1.resources
 C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\New folder (2)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.Login.resources
 C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\New folder (2)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.Properties.Resources.resources
 C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\New folder (2)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.register_employee.resources
 C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\New folder (2)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.StudentRegistration.resources
 C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\New folder (2)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.csproj.GenerateResource.Cache
+C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\New folder (2)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.dashboard.resources
 C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\New folder (2)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.csprojResolveAssemblyReference.cache

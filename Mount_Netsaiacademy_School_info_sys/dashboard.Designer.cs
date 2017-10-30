@@ -1,6 +1,6 @@
 ﻿namespace Mount_Netsaiacademy_School_info_sys
 {
-    partial class Form1
+    partial class dashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.manageStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editStudentRecordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,6 +46,8 @@
             this.createUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configurationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.classManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,26 +67,6 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Location = new System.Drawing.Point(0, 96);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1879, 805);
-            this.panel1.TabIndex = 1;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogout.Image = global::Mount_Netsaiacademy_School_info_sys.Properties.Resources._5102263421;
-            this.btnLogout.Location = new System.Drawing.Point(1432, 20);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(53, 53);
-            this.btnLogout.TabIndex = 2;
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // manageStudentToolStripMenuItem
             // 
@@ -108,7 +88,7 @@
             this.registerStudentToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.registerStudentToolStripMenuItem.Image = global::Mount_Netsaiacademy_School_info_sys.Properties.Resources.images;
             this.registerStudentToolStripMenuItem.Name = "registerStudentToolStripMenuItem";
-            this.registerStudentToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.registerStudentToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.registerStudentToolStripMenuItem.Text = "Register_New_Student";
             this.registerStudentToolStripMenuItem.Click += new System.EventHandler(this.registerStudentToolStripMenuItem_Click);
             // 
@@ -116,7 +96,7 @@
             // 
             this.editStudentRecordsToolStripMenuItem.Image = global::Mount_Netsaiacademy_School_info_sys.Properties.Resources.Student_3_icon2;
             this.editStudentRecordsToolStripMenuItem.Name = "editStudentRecordsToolStripMenuItem";
-            this.editStudentRecordsToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.editStudentRecordsToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.editStudentRecordsToolStripMenuItem.Text = "Edit_Student_Records";
             this.editStudentRecordsToolStripMenuItem.Click += new System.EventHandler(this.editStudentRecordsToolStripMenuItem_Click);
             // 
@@ -218,14 +198,14 @@
             // createUsersToolStripMenuItem
             // 
             this.createUsersToolStripMenuItem.Name = "createUsersToolStripMenuItem";
-            this.createUsersToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.createUsersToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.createUsersToolStripMenuItem.Text = "Create_Users";
             this.createUsersToolStripMenuItem.Click += new System.EventHandler(this.createUsersToolStripMenuItem_Click);
             // 
             // configurationsToolStripMenuItem
             // 
             this.configurationsToolStripMenuItem.Name = "configurationsToolStripMenuItem";
-            this.configurationsToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.configurationsToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.configurationsToolStripMenuItem.Text = "Configurations";
             this.configurationsToolStripMenuItem.Click += new System.EventHandler(this.configurationsToolStripMenuItem_Click);
             // 
@@ -236,7 +216,27 @@
             this.classManagementToolStripMenuItem.Text = "Class Management";
             this.classManagementToolStripMenuItem.Click += new System.EventHandler(this.classManagementToolStripMenuItem_Click);
             // 
-            // Form1
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Location = new System.Drawing.Point(0, 96);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1879, 805);
+            this.panel1.TabIndex = 1;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogout.Image = global::Mount_Netsaiacademy_School_info_sys.Properties.Resources._5102263421;
+            this.btnLogout.Location = new System.Drawing.Point(1432, 20);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(53, 53);
+            this.btnLogout.TabIndex = 2;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -245,8 +245,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "dashboard";
             this.Text = "Mount_Netsai DashBoard";
+            this.Load += new System.EventHandler(this.dashboard_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -256,26 +257,26 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem manageStudentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registerStudentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editStudentRecordsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem studentPerfomanceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem studentsFeesStatusToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem checkStudentFeesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem humanResourseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem employeeManagmentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registerEmployeeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editEployeeRecordToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem administratorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem createUsersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem enterStudentsExamPerformanceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem veiwStudeentPerfomanceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem leaveApplicationToolStripMenuItem;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ToolStripMenuItem configurationsToolStripMenuItem;
-        private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.ToolStripMenuItem classManagementToolStripMenuItem;
+        public System.Windows.Forms.MenuStrip menuStrip1;
+        public System.Windows.Forms.ToolStripMenuItem manageStudentToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem registerStudentToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem editStudentRecordsToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem studentPerfomanceToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem studentsFeesStatusToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem checkStudentFeesToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem humanResourseToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem employeeManagmentToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem registerEmployeeToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem editEployeeRecordToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem administratorToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem createUsersToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem enterStudentsExamPerformanceToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem veiwStudeentPerfomanceToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem leaveApplicationToolStripMenuItem;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.ToolStripMenuItem configurationsToolStripMenuItem;
+        public System.Windows.Forms.Button btnLogout;
+        public System.Windows.Forms.ToolStripMenuItem classManagementToolStripMenuItem;
     }
 }
 

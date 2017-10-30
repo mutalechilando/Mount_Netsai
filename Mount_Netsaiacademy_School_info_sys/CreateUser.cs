@@ -424,5 +424,10 @@ namespace Mount_Netsaiacademy_School_info_sys
             }
 
         }
+
+        private void dataGridViewUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

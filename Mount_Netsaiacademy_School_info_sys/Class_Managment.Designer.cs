@@ -31,6 +31,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.classgrid = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtclass_id = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.Btnupdate = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.cmbteacher = new System.Windows.Forms.ComboBox();
             this.txtamount = new System.Windows.Forms.TextBox();
             this.txtSuffix = new System.Windows.Forms.TextBox();
-            this.txtclass_id = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.classgrid)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -66,6 +66,7 @@
             // classgrid
             // 
             this.classgrid.BackgroundColor = System.Drawing.Color.White;
+            this.classgrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.classgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.classgrid.Location = new System.Drawing.Point(469, 19);
             this.classgrid.Name = "classgrid";
@@ -94,6 +95,14 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add Class";
+            // 
+            // txtclass_id
+            // 
+            this.txtclass_id.Location = new System.Drawing.Point(93, 31);
+            this.txtclass_id.Name = "txtclass_id";
+            this.txtclass_id.Size = new System.Drawing.Size(202, 20);
+            this.txtclass_id.TabIndex = 14;
+            this.txtclass_id.Visible = false;
             // 
             // groupBox3
             // 
@@ -245,14 +254,6 @@
             this.txtSuffix.Name = "txtSuffix";
             this.txtSuffix.Size = new System.Drawing.Size(270, 20);
             this.txtSuffix.TabIndex = 2;
-            // 
-            // txtclass_id
-            // 
-            this.txtclass_id.Location = new System.Drawing.Point(93, 31);
-            this.txtclass_id.Name = "txtclass_id";
-            this.txtclass_id.Size = new System.Drawing.Size(202, 20);
-            this.txtclass_id.TabIndex = 14;
-            this.txtclass_id.Visible = false;
             // 
             // Class_Managment
             // 

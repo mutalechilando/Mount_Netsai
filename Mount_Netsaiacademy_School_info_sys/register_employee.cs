@@ -120,6 +120,10 @@ namespace Mount_Netsaiacademy_School_info_sys
             {
                 txtdayspermonth.Text = "2";
             }
+            else if (cmbemptype.Text == "Administrator")
+            {
+                txtdayspermonth.Text = "2";
+            }
 
         }
 

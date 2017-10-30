@@ -16,10 +16,10 @@ namespace Mount_Netsaiacademy_School_info_sys
 
 
 
-    public partial class Form1 : Form
+    public partial class dashboard : Form
     {
 
-        public Form1()
+        public dashboard()
         {
             InitializeComponent();
         }
@@ -136,6 +136,11 @@ namespace Mount_Netsaiacademy_School_info_sys
                 createClass.Size = panel1.Size;
                 createClass.Show();
             
+
+        }
+
+        private void dashboard_Load(object sender, EventArgs e)
+        {
 
         }
     }

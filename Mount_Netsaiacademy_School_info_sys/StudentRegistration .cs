@@ -261,7 +261,7 @@ namespace Mount_Netsaiacademy_School_info_sys
                     cmbdisability.Text = "";
                     dtp_date_of_birth.Text = "";
                     dTp_enroll.Text = "";
-                    pictureBox1.Image.Dispose();
+                    //pictureBox1.Image.Dispose();
                     txtStudentNumber.Text = "";
                     txtamount.Text = "";
                     txtclassid.Text = "";

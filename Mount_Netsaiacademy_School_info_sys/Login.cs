@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
-
+using System.Globalization;
 namespace Mount_Netsaiacademy_School_info_sys
 {
     public partial class Login : Form
@@ -33,44 +33,81 @@ namespace Mount_Netsaiacademy_School_info_sys
             //string password = passwordHash.To
 
             SqlConnection con = new SqlConnection(Constr);
+            con.Open();
 
+            String Logging_in = "Logging_in";
+            SqlCommand cmd = new SqlCommand(Logging_in, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@userName", userName);
+            cmd.Parameters.AddWithValue("@passwordHash", passwordHash);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
             try
             {
-                con.Open();
-
-                String Logging_in = "Logging_in";
-                SqlCommand cmd = new SqlCommand(Logging_in, con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@userName", userName);
-                cmd.Parameters.AddWithValue("@passwordHash", passwordHash);
-
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+                
 
                 if (dt.Rows.Count > 0)
                 {
-                    MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide();
-                    Form1 home = new Form1();
-                    home.ShowDialog();
+                    SqlDataReader rd = cmd.ExecuteReader();
+                    
+                    
 
+                    if (rd.Read())
+                    {
+                        txtemptitle.Text = rd["emp_title"].ToString();
+                        var emp_title = rd["emp_title"].ToString();
+
+                        if (emp_title.Equals("Manager"))
+                        {
+                            MessageBox.Show("welcome '" + txtemptitle.Text + "'","Succes", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                           
+                            this.Hide();
+                            dashboard home = new dashboard();
+                            home.manageStudentToolStripMenuItem.Visible = false;
+                            home.ShowDialog();
+                        }
+                        else if (emp_title.Equals("Principal"))
+                        {
+                            this.Hide();
+                            dashboard home = new dashboard();
+                            home.manageStudentToolStripMenuItem.Visible = false;
+                            home.ShowDialog();
+                            //dashboard.manageStudentToolStripMenuItem.Visible = False;
+                        }
+                        else if (emp_title.Equals("Teacher"))
+                        {
+                            this.Hide();
+                            dashboard home = new dashboard();
+                            home.manageStudentToolStripMenuItem.Visible = false;
+                            home.ShowDialog();
+                            //dashboard.manageStudentToolStripMenuItem.Visible = False;
+                        }
+                        else if (emp_title.Equals("Administrator"))
+                        {
+                            this.Hide();
+                            dashboard home = new dashboard();
+                            home.manageStudentToolStripMenuItem.Visible = true;
+                            home.ShowDialog();
+                            //dashboard.manageStudentToolStripMenuItem.Visible = False;
+                        }
+                       
+
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Invalid Login please check username and password");
                     pictureLock.Visible = true;
                 }
-
             }
-
             finally
             {
                 con.Close();
             }
 
         }
-
         public static string MD5Hash(string input)
         {
             StringBuilder hash = new StringBuilder();
