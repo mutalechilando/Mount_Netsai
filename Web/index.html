@@ -77,9 +77,9 @@
           <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
         </p>
       </div>
-
+style="background-color:#000;"
     </div>-->
-    <div class="container-fluid" style="background-color:#000;">
+    <div id="landingContainer" class="container-fluid" >
     <div class="no-padding col-lg-12  col-md-12 col-sm-12 col-xs-12" >
         <!-- Carousel -->
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -90,46 +90,46 @@
             </ol>
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
-                <div class="item active">
-                    <img src="http://unsplash.s3.amazonaws.com/batch%209/barcelona-boardwalk.jpg" alt="First slide">
+                <div id="firstSlide" class="item active">
+                    <img src="dist/img/bg-slide-one.jpg" alt="First slide">
                     <!-- Static Header -->
                     <div class="header-text hidden-xs">
                         <div class="col-md-12 text-center">
-                            <h1>Welcome to Mount Netsai Academy</h1>
-                            <br>
-                            <h3>
-        
-                            </h3>
-                            <br>
-                        
+                         <div class="text-spacer-top-50">
+                            
+                            <h2>Welcome to Mount Netsai Academy</h2>   
+                            
+                            </div>            
                         </div>
                     </div><!-- /header-text -->
                 </div>
-                <div class="item">
-                    <img src="http://unsplash.s3.amazonaws.com/batch%209/barcelona-boardwalk.jpg" alt="Second slide">
+                <div id="secondSlide" class="item">
+                    <img src="dist/img/bg-slide-two.jpg" alt="Second slide">
                     <!-- Static Header -->
                     <div class="header-text hidden-xs">
                         <div class="col-md-12 text-center">
+                            <div class="text-spacer-top-50">
                             <h2>
-                                Soemthing new happening
+                                A unique school for your children
                             </h2>
-
-                            <br>
-                           
+                            <p>We pride ourselves in providing the best educational experience for your children</p>
+                            <div>
                         </div>
                     </div><!-- /header-text -->
                 </div>
             </div>
             <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <!--        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"></span>
             </a>
             <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
+            </a>-->
         </div><!-- /carousel -->
     </div>
    </div>
+    </div>
+    </div>
      <!-- /container -->
    <!-- about school-->
    <div class="about">
@@ -137,17 +137,25 @@
         <div class="row">
             <div class="col-lg-12" style="text-align:center;">
                 <h2 class="header-space" id="#contact-us">Our  Academy</h2>
-                <p>Mount Netsai is a unique,</p>
+                <p>Mount Netsai is a unique, create academy for children from baby class, middle and reception</p>
             </div>
             <div class="col-lg-12">
-                   <div class="col-md-4">
-                       #grades
+                   <div class="col-md-6 text-center class-explainer">
+                        <h3> We Offer the following:</h3>
+                       <ul class="list-unstyled">
+                           <li>&middot; Baby Class</li>
+                           <li>&middot; Reception</li>
+                           <li>&middot; MIddle Class</li>
+                       </ul>
                     </div>
-                    <div class="col-md-4">
-                       #calender year
-                    </div>
-                    <div class="col-md-4">
-                      #general information
+                    <div class="col-md-6 text-center why-banner">
+                      <h3> Why choose us? </h3>
+                       <ul class="list-unstyled">
+                           <li>&middot; Excellent Security</li>
+                           <li>&middot; Separate Classrooms for Each Level</li>
+                           <li>&middot; Program for School age children</li>
+                           <li>&middot; Lots of love and fun</li>
+                       </ul>
                     </div>
             </div>
             </div>
@@ -195,6 +203,7 @@
                         on-success="setResponse(response)"
                         style="margin-bottom:15px;">    
                         </div>-->
+                        <button class="btn btn-default">Send Message</button>
 
                     </div>
                 </form>
@@ -213,7 +222,7 @@
 
                     <div class="col-md-3">
                         <p><span class="footer-title">ABOUT</span></p>
-                        <p><a href="#">Profile</a></p>
+                  <!--      <p><a href="#">Profile</a></p>-->
                          <p><a href="#services">Make an Enquiry</a></p>
                          <p><a href="#">Find us on Facebook</a></p>
                     </div>
@@ -225,7 +234,7 @@
                     <div class="col-md-3">
                         <p><span class="footer-title">LOCATION</span></p>
                         <p>Plot 16361 Off Nationalist road, Kamwala South Lusaka, Zambia</p>
-                        <p><a href="#">View on Map</a></p>
+                 <!--       <p><a href="#">View on Map</a></p>-->
                     </div>
                     <div class="col-md-3">
                         <p>&copy; 2017 Mount Netsai. All rights reserved.<p>
@@ -245,6 +254,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="dist/js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            $('#carousel-example-generic').on('slide.bs.carousel', function(e) {
+            if(e.relatedTarget.id == 'firstSlide'){
+                console.log("switch");
+                $("#landingContainer").css('background-image', 'url(dist/img/bg-slide-one-overlay.jpg)');
+            } else if(e.relatedTarget.id == 'secondSlide'){
+                console.log("switch");
+                $("#landingContainer").css('background-image', 'url(dist/img/bg-slide-two-overlay.jpg');
+            }
+            })
+        
+        });
+   </script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
