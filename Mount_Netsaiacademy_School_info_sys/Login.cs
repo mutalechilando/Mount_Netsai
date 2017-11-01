@@ -61,7 +61,7 @@ namespace Mount_Netsaiacademy_School_info_sys
 
                         if (emp_title.Equals("Manager"))
                         {
-                            MessageBox.Show("welcome '" + txtemptitle.Text + "'","Succes", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                            MessageBox.Show("welcome '" + txtemptitle.Text + "'","Success", MessageBoxButtons.OK,MessageBoxIcon.Information);
                            
                             this.Hide();
                             dashboard home = new dashboard();
@@ -70,6 +70,8 @@ namespace Mount_Netsaiacademy_School_info_sys
                         }
                         else if (emp_title.Equals("Principal"))
                         {
+                            MessageBox.Show("welcome '" + txtemptitle.Text + "'", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                             this.Hide();
                             dashboard home = new dashboard();
                             home.manageStudentToolStripMenuItem.Visible = false;
@@ -78,6 +80,8 @@ namespace Mount_Netsaiacademy_School_info_sys
                         }
                         else if (emp_title.Equals("Teacher"))
                         {
+                            MessageBox.Show("welcome '" + txtemptitle.Text + "'", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                             this.Hide();
                             dashboard home = new dashboard();
                             home.manageStudentToolStripMenuItem.Visible = false;
@@ -86,6 +90,8 @@ namespace Mount_Netsaiacademy_School_info_sys
                         }
                         else if (emp_title.Equals("Administrator"))
                         {
+                            MessageBox.Show("welcome '" + txtemptitle.Text + "'", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                             this.Hide();
                             dashboard home = new dashboard();
                             home.manageStudentToolStripMenuItem.Visible = true;
