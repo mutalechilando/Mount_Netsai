@@ -127,7 +127,21 @@ namespace Mount_Netsaiacademy_School_info_sys
             return hash.ToString();
         }
 
+        private void textBoxPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(this, new EventArgs());
+            }
+        }
 
+        private void textBoxUserName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPassword.Select();
+            }
+        }
 
     }
 }
