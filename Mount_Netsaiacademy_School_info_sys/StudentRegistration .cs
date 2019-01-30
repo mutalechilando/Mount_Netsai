@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
 using System.Configuration;
-using System.IO;
+
 
 namespace Mount_Netsaiacademy_School_info_sys
 {
@@ -194,6 +194,10 @@ namespace Mount_Netsaiacademy_School_info_sys
             {
                 MessageBox.Show("disability Field cannot be empty", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+            else if (cmbrace.Text == "")
+            {
+                MessageBox.Show("Race Field cannot be empty", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
             else if (txtage.Text == "")
             {
                 MessageBox.Show("Age Field cannot be empty please ensure the date of birth is valid", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -244,6 +248,7 @@ namespace Mount_Netsaiacademy_School_info_sys
                 cmd.Parameters.AddWithValue("@class_teacher", txtclassteacher.Text.Trim());
                 cmd.Parameters.AddWithValue("@class_year", txtyear.Text.Trim());
                 cmd.Parameters.AddWithValue("@Class_id", txtclassid.Text.Trim());
+                cmd.Parameters.AddWithValue("@amountpaid", txtamountpayed.Text.Trim());
 
                 try
                 {
@@ -334,6 +339,11 @@ namespace Mount_Netsaiacademy_School_info_sys
             {
                 con.Close();
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

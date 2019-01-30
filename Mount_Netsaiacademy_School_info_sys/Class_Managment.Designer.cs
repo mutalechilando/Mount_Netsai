@@ -66,8 +66,9 @@
             // classgrid
             // 
             this.classgrid.BackgroundColor = System.Drawing.Color.White;
-            this.classgrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.classgrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.classgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.classgrid.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.classgrid.Location = new System.Drawing.Point(469, 19);
             this.classgrid.Name = "classgrid";
             this.classgrid.Size = new System.Drawing.Size(686, 614);

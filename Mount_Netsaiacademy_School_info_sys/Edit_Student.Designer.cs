@@ -32,9 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edit_Student));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cmbyear = new System.Windows.Forms.ComboBox();
+            this.cmbstatus = new System.Windows.Forms.ComboBox();
+            this.txtStudentNmber = new System.Windows.Forms.TextBox();
             this.cmb_grade = new System.Windows.Forms.ComboBox();
+            this.dtpcheck = new System.Windows.Forms.DateTimePicker();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.tblStudentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mount_NetsaiAcadamyDataSet5 = new Mount_Netsaiacademy_School_info_sys.Mount_NetsaiAcadamyDataSet5();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -47,6 +53,13 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.grideditstud = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmbyearr = new System.Windows.Forms.ComboBox();
+            this.cmbgrade = new System.Windows.Forms.ComboBox();
+            this.txtperson_id = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.cmbstudentstatus = new System.Windows.Forms.ComboBox();
+            this.dtpenrollment = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -56,32 +69,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.picbox_Student = new System.Windows.Forms.PictureBox();
-            this.dtpcheck = new System.Windows.Forms.DateTimePicker();
             this.txtStudent_number = new System.Windows.Forms.TextBox();
             this.txtfee_amount = new System.Windows.Forms.TextBox();
-            this.txtYear = new System.Windows.Forms.TextBox();
             this.txtteacher = new System.Windows.Forms.TextBox();
-            this.txtStudentNmber = new System.Windows.Forms.TextBox();
-            this.dtpenrollment = new System.Windows.Forms.DateTimePicker();
-            this.cmbstatus = new System.Windows.Forms.ComboBox();
-            this.txtgrade = new System.Windows.Forms.TextBox();
-            this.cmbstudentstatus = new System.Windows.Forms.ComboBox();
-            this.mount_NetsaiAcadamyDataSet5 = new Mount_Netsaiacademy_School_info_sys.Mount_NetsaiAcadamyDataSet5();
-            this.tblStudentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tbl_StudentsTableAdapter = new Mount_Netsaiacademy_School_info_sys.Mount_NetsaiAcadamyDataSet5TableAdapters.Tbl_StudentsTableAdapter();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.cmbyear = new System.Windows.Forms.ComboBox();
-            this.txtperson_id = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblStudentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mount_NetsaiAcadamyDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grideditstud)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_Student)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mount_NetsaiAcadamyDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblStudentsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -111,6 +111,43 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Filters";
             // 
+            // cmbyear
+            // 
+            this.cmbyear.BackColor = System.Drawing.Color.White;
+            this.cmbyear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbyear.FormattingEnabled = true;
+            this.cmbyear.Location = new System.Drawing.Point(956, 30);
+            this.cmbyear.Name = "cmbyear";
+            this.cmbyear.Size = new System.Drawing.Size(189, 21);
+            this.cmbyear.TabIndex = 18;
+            this.cmbyear.SelectedIndexChanged += new System.EventHandler(this.cmbyear_SelectedIndexChanged_1);
+            // 
+            // cmbstatus
+            // 
+            this.cmbstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbstatus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbstatus.FormattingEnabled = true;
+            this.cmbstatus.Items.AddRange(new object[] {
+            "Active",
+            "Transferred",
+            "Expelled",
+            "Suspended",
+            "Diseased",
+            ""});
+            this.cmbstatus.Location = new System.Drawing.Point(736, 29);
+            this.cmbstatus.Name = "cmbstatus";
+            this.cmbstatus.Size = new System.Drawing.Size(203, 21);
+            this.cmbstatus.TabIndex = 17;
+            this.cmbstatus.SelectedIndexChanged += new System.EventHandler(this.cmbstatus_SelectedIndexChanged);
+            // 
+            // txtStudentNmber
+            // 
+            this.txtStudentNmber.Location = new System.Drawing.Point(6, 30);
+            this.txtStudentNmber.Name = "txtStudentNmber";
+            this.txtStudentNmber.Size = new System.Drawing.Size(215, 20);
+            this.txtStudentNmber.TabIndex = 16;
+            this.txtStudentNmber.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            // 
             // cmb_grade
             // 
             this.cmb_grade.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -120,6 +157,15 @@
             this.cmb_grade.Size = new System.Drawing.Size(209, 21);
             this.cmb_grade.TabIndex = 3;
             this.cmb_grade.SelectedIndexChanged += new System.EventHandler(this.cmb_grade_SelectedIndexChanged);
+            // 
+            // dtpcheck
+            // 
+            this.dtpcheck.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpcheck.Location = new System.Drawing.Point(251, 30);
+            this.dtpcheck.Name = "dtpcheck";
+            this.dtpcheck.Size = new System.Drawing.Size(222, 20);
+            this.dtpcheck.TabIndex = 6;
+            this.dtpcheck.ValueChanged += new System.EventHandler(this.dtpcheck_ValueChanged);
             // 
             // bindingNavigator1
             // 
@@ -158,6 +204,16 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // tblStudentsBindingSource
+            // 
+            this.tblStudentsBindingSource.DataMember = "Tbl_Students";
+            this.tblStudentsBindingSource.DataSource = this.mount_NetsaiAcadamyDataSet5;
+            // 
+            // mount_NetsaiAcadamyDataSet5
+            // 
+            this.mount_NetsaiAcadamyDataSet5.DataSetName = "Mount_NetsaiAcadamyDataSet5";
+            this.mount_NetsaiAcadamyDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -244,10 +300,13 @@
             this.grideditstud.Name = "grideditstud";
             this.grideditstud.Size = new System.Drawing.Size(1151, 525);
             this.grideditstud.TabIndex = 1;
+            this.grideditstud.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grideditstud_CellContentClick);
             this.grideditstud.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStudent_RowEnter);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cmbyearr);
+            this.groupBox2.Controls.Add(this.cmbgrade);
             this.groupBox2.Controls.Add(this.txtperson_id);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.btnUpdate);
@@ -264,8 +323,6 @@
             this.groupBox2.Controls.Add(this.picbox_Student);
             this.groupBox2.Controls.Add(this.txtStudent_number);
             this.groupBox2.Controls.Add(this.txtfee_amount);
-            this.groupBox2.Controls.Add(this.txtgrade);
-            this.groupBox2.Controls.Add(this.txtYear);
             this.groupBox2.Controls.Add(this.txtteacher);
             this.groupBox2.Location = new System.Drawing.Point(7, 44);
             this.groupBox2.Name = "groupBox2";
@@ -273,6 +330,85 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Controls";
+            // 
+            // cmbyearr
+            // 
+            this.cmbyearr.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cmbyearr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbyearr.FormattingEnabled = true;
+            this.cmbyearr.Location = new System.Drawing.Point(103, 330);
+            this.cmbyearr.Name = "cmbyearr";
+            this.cmbyearr.Size = new System.Drawing.Size(202, 21);
+            this.cmbyearr.TabIndex = 51;
+            this.cmbyearr.SelectedIndexChanged += new System.EventHandler(this.cmbyearr_SelectedIndexChanged);
+            // 
+            // cmbgrade
+            // 
+            this.cmbgrade.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cmbgrade.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbgrade.FormattingEnabled = true;
+            this.cmbgrade.Location = new System.Drawing.Point(103, 365);
+            this.cmbgrade.Name = "cmbgrade";
+            this.cmbgrade.Size = new System.Drawing.Size(230, 21);
+            this.cmbgrade.TabIndex = 50;
+            this.cmbgrade.SelectedIndexChanged += new System.EventHandler(this.cmbgrade_SelectedIndexChanged);
+            // 
+            // txtperson_id
+            // 
+            this.txtperson_id.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblStudentsBindingSource, "Year", true));
+            this.txtperson_id.Location = new System.Drawing.Point(103, 519);
+            this.txtperson_id.Name = "txtperson_id";
+            this.txtperson_id.Size = new System.Drawing.Size(240, 20);
+            this.txtperson_id.TabIndex = 22;
+            this.txtperson_id.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Location = new System.Drawing.Point(232, 558);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(103, 23);
+            this.button4.TabIndex = 21;
+            this.button4.Text = "Delete";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdate.Location = new System.Drawing.Point(123, 558);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(103, 23);
+            this.btnUpdate.TabIndex = 20;
+            this.btnUpdate.Text = "update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // cmbstudentstatus
+            // 
+            this.cmbstudentstatus.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.cmbstudentstatus.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblStudentsBindingSource, "Student_status", true));
+            this.cmbstudentstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbstudentstatus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbstudentstatus.FormattingEnabled = true;
+            this.cmbstudentstatus.Items.AddRange(new object[] {
+            "Active",
+            "Transferred",
+            "Expelled",
+            "Suspended",
+            "Diseased",
+            ""});
+            this.cmbstudentstatus.Location = new System.Drawing.Point(103, 481);
+            this.cmbstudentstatus.Name = "cmbstudentstatus";
+            this.cmbstudentstatus.Size = new System.Drawing.Size(240, 21);
+            this.cmbstudentstatus.TabIndex = 18;
+            // 
+            // dtpenrollment
+            // 
+            this.dtpenrollment.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblStudentsBindingSource, "enrollment_date", true));
+            this.dtpenrollment.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpenrollment.Location = new System.Drawing.Point(103, 247);
+            this.dtpenrollment.Name = "dtpenrollment";
+            this.dtpenrollment.Size = new System.Drawing.Size(240, 20);
+            this.dtpenrollment.TabIndex = 16;
             // 
             // button1
             // 
@@ -351,20 +487,11 @@
             // 
             this.picbox_Student.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picbox_Student.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.tblStudentsBindingSource, "Student_Picture", true));
-            this.picbox_Student.Location = new System.Drawing.Point(81, 19);
+            this.picbox_Student.Location = new System.Drawing.Point(103, 19);
             this.picbox_Student.Name = "picbox_Student";
-            this.picbox_Student.Size = new System.Drawing.Size(228, 180);
+            this.picbox_Student.Size = new System.Drawing.Size(179, 180);
             this.picbox_Student.TabIndex = 7;
             this.picbox_Student.TabStop = false;
-            // 
-            // dtpcheck
-            // 
-            this.dtpcheck.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpcheck.Location = new System.Drawing.Point(251, 30);
-            this.dtpcheck.Name = "dtpcheck";
-            this.dtpcheck.Size = new System.Drawing.Size(222, 20);
-            this.dtpcheck.TabIndex = 6;
-            this.dtpcheck.ValueChanged += new System.EventHandler(this.dtpcheck_ValueChanged);
             // 
             // txtStudent_number
             // 
@@ -382,14 +509,6 @@
             this.txtfee_amount.Size = new System.Drawing.Size(240, 20);
             this.txtfee_amount.TabIndex = 3;
             // 
-            // txtYear
-            // 
-            this.txtYear.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblStudentsBindingSource, "Year", true));
-            this.txtYear.Location = new System.Drawing.Point(103, 330);
-            this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(240, 20);
-            this.txtYear.TabIndex = 1;
-            // 
             // txtteacher
             // 
             this.txtteacher.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblStudentsBindingSource, "class_Teacher", true));
@@ -397,122 +516,11 @@
             this.txtteacher.Name = "txtteacher";
             this.txtteacher.Size = new System.Drawing.Size(240, 20);
             this.txtteacher.TabIndex = 0;
-            // 
-            // txtStudentNmber
-            // 
-            this.txtStudentNmber.Location = new System.Drawing.Point(6, 30);
-            this.txtStudentNmber.Name = "txtStudentNmber";
-            this.txtStudentNmber.Size = new System.Drawing.Size(215, 20);
-            this.txtStudentNmber.TabIndex = 16;
-            this.txtStudentNmber.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
-            // 
-            // dtpenrollment
-            // 
-            this.dtpenrollment.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblStudentsBindingSource, "enrollment_date", true));
-            this.dtpenrollment.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpenrollment.Location = new System.Drawing.Point(103, 247);
-            this.dtpenrollment.Name = "dtpenrollment";
-            this.dtpenrollment.Size = new System.Drawing.Size(240, 20);
-            this.dtpenrollment.TabIndex = 16;
-            // 
-            // cmbstatus
-            // 
-            this.cmbstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbstatus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbstatus.FormattingEnabled = true;
-            this.cmbstatus.Items.AddRange(new object[] {
-            "Active",
-            "Transferred",
-            "Expelled",
-            "Suspended",
-            "Diseased",
-            ""});
-            this.cmbstatus.Location = new System.Drawing.Point(736, 29);
-            this.cmbstatus.Name = "cmbstatus";
-            this.cmbstatus.Size = new System.Drawing.Size(203, 21);
-            this.cmbstatus.TabIndex = 17;
-            this.cmbstatus.SelectedIndexChanged += new System.EventHandler(this.cmbstatus_SelectedIndexChanged);
-            // 
-            // txtgrade
-            // 
-            this.txtgrade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblStudentsBindingSource, "grade", true));
-            this.txtgrade.Location = new System.Drawing.Point(103, 365);
-            this.txtgrade.Name = "txtgrade";
-            this.txtgrade.Size = new System.Drawing.Size(240, 20);
-            this.txtgrade.TabIndex = 2;
-            // 
-            // cmbstudentstatus
-            // 
-            this.cmbstudentstatus.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.cmbstudentstatus.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblStudentsBindingSource, "Student_status", true));
-            this.cmbstudentstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbstudentstatus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbstudentstatus.FormattingEnabled = true;
-            this.cmbstudentstatus.Items.AddRange(new object[] {
-            "Active",
-            "Transferred",
-            "Expelled",
-            "Suspended",
-            "Diseased",
-            ""});
-            this.cmbstudentstatus.Location = new System.Drawing.Point(103, 481);
-            this.cmbstudentstatus.Name = "cmbstudentstatus";
-            this.cmbstudentstatus.Size = new System.Drawing.Size(240, 21);
-            this.cmbstudentstatus.TabIndex = 18;
-            // 
-            // mount_NetsaiAcadamyDataSet5
-            // 
-            this.mount_NetsaiAcadamyDataSet5.DataSetName = "Mount_NetsaiAcadamyDataSet5";
-            this.mount_NetsaiAcadamyDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblStudentsBindingSource
-            // 
-            this.tblStudentsBindingSource.DataMember = "Tbl_Students";
-            this.tblStudentsBindingSource.DataSource = this.mount_NetsaiAcadamyDataSet5;
+            this.txtteacher.TextChanged += new System.EventHandler(this.txtteacher_TextChanged);
             // 
             // tbl_StudentsTableAdapter
             // 
             this.tbl_StudentsTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUpdate.Location = new System.Drawing.Point(123, 558);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(103, 23);
-            this.btnUpdate.TabIndex = 20;
-            this.btnUpdate.Text = "update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Location = new System.Drawing.Point(232, 558);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(103, 23);
-            this.button4.TabIndex = 21;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // cmbyear
-            // 
-            this.cmbyear.BackColor = System.Drawing.Color.White;
-            this.cmbyear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbyear.FormattingEnabled = true;
-            this.cmbyear.Location = new System.Drawing.Point(956, 30);
-            this.cmbyear.Name = "cmbyear";
-            this.cmbyear.Size = new System.Drawing.Size(189, 21);
-            this.cmbyear.TabIndex = 18;
-            this.cmbyear.SelectedIndexChanged += new System.EventHandler(this.cmbyear_SelectedIndexChanged_1);
-            // 
-            // txtperson_id
-            // 
-            this.txtperson_id.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblStudentsBindingSource, "Year", true));
-            this.txtperson_id.Location = new System.Drawing.Point(103, 519);
-            this.txtperson_id.Name = "txtperson_id";
-            this.txtperson_id.Size = new System.Drawing.Size(240, 20);
-            this.txtperson_id.TabIndex = 22;
-            this.txtperson_id.Visible = false;
             // 
             // Edit_Student
             // 
@@ -532,12 +540,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblStudentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mount_NetsaiAcadamyDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grideditstud)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_Student)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mount_NetsaiAcadamyDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblStudentsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -573,12 +581,10 @@
         private System.Windows.Forms.DateTimePicker dtpcheck;
         private System.Windows.Forms.TextBox txtStudent_number;
         private System.Windows.Forms.TextBox txtfee_amount;
-        private System.Windows.Forms.TextBox txtYear;
         private System.Windows.Forms.TextBox txtteacher;
         private System.Windows.Forms.TextBox txtStudentNmber;
         private System.Windows.Forms.DateTimePicker dtpenrollment;
         private System.Windows.Forms.ComboBox cmbstatus;
-        private System.Windows.Forms.TextBox txtgrade;
         private System.Windows.Forms.ComboBox cmbstudentstatus;
         private Mount_NetsaiAcadamyDataSet5 mount_NetsaiAcadamyDataSet5;
         private System.Windows.Forms.BindingSource tblStudentsBindingSource;
@@ -587,5 +593,7 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.ComboBox cmbyear;
         private System.Windows.Forms.TextBox txtperson_id;
+        private System.Windows.Forms.ComboBox cmbgrade;
+        private System.Windows.Forms.ComboBox cmbyearr;
     }
 }

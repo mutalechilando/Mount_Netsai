@@ -31,6 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentRegistration));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtyear = new System.Windows.Forms.TextBox();
+            this.txtamount = new System.Windows.Forms.TextBox();
+            this.txtclassid = new System.Windows.Forms.TextBox();
+            this.txtclassteacher = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cmbgrade = new System.Windows.Forms.ComboBox();
             this.txtemptype = new System.Windows.Forms.TextBox();
@@ -62,13 +69,7 @@
             this.txtStudentNumber = new System.Windows.Forms.TextBox();
             this.txtlastname = new System.Windows.Forms.TextBox();
             this.txtfname = new System.Windows.Forms.TextBox();
-            this.txtclassteacher = new System.Windows.Forms.TextBox();
-            this.txtclassid = new System.Windows.Forms.TextBox();
-            this.txtamount = new System.Windows.Forms.TextBox();
-            this.txtyear = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.txtamountpayed = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -87,6 +88,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtamountpayed);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label12);
@@ -127,6 +129,62 @@
             this.groupBox2.Size = new System.Drawing.Size(972, 746);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(517, 574);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(78, 13);
+            this.label14.TabIndex = 57;
+            this.label14.Text = "Class Teacher:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(94, 622);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(32, 13);
+            this.label13.TabIndex = 56;
+            this.label13.Text = "Year:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(80, 577);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(46, 13);
+            this.label12.TabIndex = 55;
+            this.label12.Text = "Amount:";
+            // 
+            // txtyear
+            // 
+            this.txtyear.Location = new System.Drawing.Point(134, 619);
+            this.txtyear.Name = "txtyear";
+            this.txtyear.Size = new System.Drawing.Size(224, 20);
+            this.txtyear.TabIndex = 54;
+            // 
+            // txtamount
+            // 
+            this.txtamount.Location = new System.Drawing.Point(134, 574);
+            this.txtamount.Name = "txtamount";
+            this.txtamount.Size = new System.Drawing.Size(224, 20);
+            this.txtamount.TabIndex = 53;
+            // 
+            // txtclassid
+            // 
+            this.txtclassid.Location = new System.Drawing.Point(601, 615);
+            this.txtclassid.Name = "txtclassid";
+            this.txtclassid.Size = new System.Drawing.Size(224, 20);
+            this.txtclassid.TabIndex = 52;
+            this.txtclassid.Visible = false;
+            // 
+            // txtclassteacher
+            // 
+            this.txtclassteacher.Location = new System.Drawing.Point(601, 570);
+            this.txtclassteacher.Name = "txtclassteacher";
+            this.txtclassteacher.Size = new System.Drawing.Size(310, 20);
+            this.txtclassteacher.TabIndex = 51;
             // 
             // label11
             // 
@@ -196,6 +254,7 @@
             this.button4.TabIndex = 1;
             this.button4.Text = "Update";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnregister
             // 
@@ -429,61 +488,14 @@
             this.txtfname.TabIndex = 19;
             this.txtfname.TextChanged += new System.EventHandler(this.txtfname_TextChanged_1);
             // 
-            // txtclassteacher
+            // txtamountpayed
             // 
-            this.txtclassteacher.Location = new System.Drawing.Point(601, 570);
-            this.txtclassteacher.Name = "txtclassteacher";
-            this.txtclassteacher.Size = new System.Drawing.Size(310, 20);
-            this.txtclassteacher.TabIndex = 51;
-            // 
-            // txtclassid
-            // 
-            this.txtclassid.Location = new System.Drawing.Point(601, 615);
-            this.txtclassid.Name = "txtclassid";
-            this.txtclassid.Size = new System.Drawing.Size(224, 20);
-            this.txtclassid.TabIndex = 52;
-            this.txtclassid.Visible = false;
-            // 
-            // txtamount
-            // 
-            this.txtamount.Location = new System.Drawing.Point(134, 574);
-            this.txtamount.Name = "txtamount";
-            this.txtamount.Size = new System.Drawing.Size(224, 20);
-            this.txtamount.TabIndex = 53;
-            // 
-            // txtyear
-            // 
-            this.txtyear.Location = new System.Drawing.Point(134, 619);
-            this.txtyear.Name = "txtyear";
-            this.txtyear.Size = new System.Drawing.Size(224, 20);
-            this.txtyear.TabIndex = 54;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(80, 577);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 13);
-            this.label12.TabIndex = 55;
-            this.label12.Text = "Amount:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(94, 622);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(32, 13);
-            this.label13.TabIndex = 56;
-            this.label13.Text = "Year:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(517, 574);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(78, 13);
-            this.label14.TabIndex = 57;
-            this.label14.Text = "Class Teacher:";
+            this.txtamountpayed.Location = new System.Drawing.Point(601, 642);
+            this.txtamountpayed.Name = "txtamountpayed";
+            this.txtamountpayed.Size = new System.Drawing.Size(129, 20);
+            this.txtamountpayed.TabIndex = 58;
+            this.txtamountpayed.Text = "0";
+            this.txtamountpayed.Visible = false;
             // 
             // StudentRegistration
             // 
@@ -547,6 +559,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtamountpayed;
 
 
     }

@@ -66,6 +66,30 @@
             this.subjectsTableAdapter = new Mount_Netsaiacademy_School_info_sys.Mount_NetsaiAcadamyDataSet2TableAdapters.subjectsTableAdapter();
             this.tbl_raceTableAdapter = new Mount_Netsaiacademy_School_info_sys.Mount_NetsaiAcadamyDataSet3TableAdapters.Tbl_raceTableAdapter();
             this.tbl_person_typeTableAdapter = new Mount_Netsaiacademy_School_info_sys.Mount_NetsaiAcadamyDataSet4TableAdapters.Tbl_person_typeTableAdapter();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.sub_class = new System.Windows.Forms.DataGridView();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.Txtguid = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btndelete = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -85,6 +109,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblpersontypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mount_NetsaiAcadamyDataSet4)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sub_class)).BeginInit();
+            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -92,19 +121,20 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1600, 730);
             this.tabControl1.TabIndex = 0;
-            this.tabControl1.Tag = "add race";
+            this.tabControl1.Tag = "add subjects to class";
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1592, 704);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "add subjects";
@@ -153,7 +183,7 @@
             this.subjectnameDataGridViewTextBoxColumn});
             this.dataGridViewSubjects.DataSource = this.subjectsBindingSource;
             this.dataGridViewSubjects.Location = new System.Drawing.Point(572, 72);
-            this.dataGridViewSubjects.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewSubjects.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewSubjects.Name = "dataGridViewSubjects";
             this.dataGridViewSubjects.RowTemplate.Height = 24;
             this.dataGridViewSubjects.Size = new System.Drawing.Size(180, 318);
@@ -206,7 +236,7 @@
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1592, 704);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "add race";
@@ -255,7 +285,7 @@
             this.racetypeDataGridViewTextBoxColumn});
             this.dataGridViewRace.DataSource = this.tblraceBindingSource;
             this.dataGridViewRace.Location = new System.Drawing.Point(556, 76);
-            this.dataGridViewRace.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewRace.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewRace.Name = "dataGridViewRace";
             this.dataGridViewRace.RowTemplate.Height = 24;
             this.dataGridViewRace.Size = new System.Drawing.Size(180, 314);
@@ -308,7 +338,7 @@
             this.tabPage3.Controls.Add(this.groupBox5);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1592, 704);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "add person_type";
@@ -358,7 +388,7 @@
             this.persontypeDataGridViewTextBoxColumn});
             this.dataGridViewPersonType.DataSource = this.tblpersontypeBindingSource;
             this.dataGridViewPersonType.Location = new System.Drawing.Point(564, 81);
-            this.dataGridViewPersonType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewPersonType.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewPersonType.Name = "dataGridViewPersonType";
             this.dataGridViewPersonType.RowTemplate.Height = 24;
             this.dataGridViewPersonType.Size = new System.Drawing.Size(180, 309);
@@ -419,6 +449,246 @@
             // 
             this.tbl_person_typeTableAdapter.ClearBeforeFill = true;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.groupBox9);
+            this.tabPage4.Controls.Add(this.groupBox8);
+            this.tabPage4.Controls.Add(this.groupBox7);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1592, 704);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Add subjects to class";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
+            // 
+            // sub_class
+            // 
+            this.sub_class.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.sub_class.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.sub_class.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.sub_class.Location = new System.Drawing.Point(6, 19);
+            this.sub_class.Name = "sub_class";
+            this.sub_class.Size = new System.Drawing.Size(1089, 539);
+            this.sub_class.TabIndex = 1;
+            this.sub_class.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sub_class_CellContentClick);
+            this.sub_class.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sub_class_CellContentClick);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.comboBox8);
+            this.groupBox7.Controls.Add(this.comboBox7);
+            this.groupBox7.Controls.Add(this.comboBox6);
+            this.groupBox7.Controls.Add(this.comboBox5);
+            this.groupBox7.Controls.Add(this.comboBox4);
+            this.groupBox7.Controls.Add(this.comboBox3);
+            this.groupBox7.Controls.Add(this.comboBox2);
+            this.groupBox7.Controls.Add(this.comboBox1);
+            this.groupBox7.Controls.Add(this.label11);
+            this.groupBox7.Controls.Add(this.label10);
+            this.groupBox7.Controls.Add(this.label9);
+            this.groupBox7.Controls.Add(this.label8);
+            this.groupBox7.Controls.Add(this.label7);
+            this.groupBox7.Controls.Add(this.label6);
+            this.groupBox7.Controls.Add(this.label5);
+            this.groupBox7.Controls.Add(this.label4);
+            this.groupBox7.Controls.Add(this.Txtguid);
+            this.groupBox7.Location = new System.Drawing.Point(6, 23);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(308, 574);
+            this.groupBox7.TabIndex = 2;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Add Subjects to class";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.btndelete);
+            this.groupBox8.Controls.Add(this.btnUpdate);
+            this.groupBox8.Location = new System.Drawing.Point(15, 603);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(1406, 82);
+            this.groupBox8.TabIndex = 3;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "controls";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.sub_class);
+            this.groupBox9.Location = new System.Drawing.Point(320, 23);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(1101, 574);
+            this.groupBox9.TabIndex = 4;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Class details";
+            // 
+            // Txtguid
+            // 
+            this.Txtguid.Location = new System.Drawing.Point(63, 30);
+            this.Txtguid.Name = "Txtguid";
+            this.Txtguid.Size = new System.Drawing.Size(228, 20);
+            this.Txtguid.TabIndex = 0;
+            this.Txtguid.Visible = false;
+            this.Txtguid.WordWrap = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 138);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Subject 1 :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(18, 171);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Subject 2 :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(21, 204);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Subject 3:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(18, 237);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 13);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Subject 4 :";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(18, 267);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Subject 5 :";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(18, 293);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(58, 13);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Subject 6 :";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(18, 323);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(58, 13);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "Subject 7 :";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(18, 352);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 13);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "Subject 8 :";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(94, 138);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(197, 21);
+            this.comboBox1.TabIndex = 17;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(94, 171);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(197, 21);
+            this.comboBox2.TabIndex = 18;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(94, 201);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(197, 21);
+            this.comboBox3.TabIndex = 19;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(94, 234);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(197, 21);
+            this.comboBox4.TabIndex = 20;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(94, 264);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(197, 21);
+            this.comboBox5.TabIndex = 21;
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(94, 293);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(197, 21);
+            this.comboBox6.TabIndex = 22;
+            // 
+            // comboBox7
+            // 
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Location = new System.Drawing.Point(94, 320);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(197, 21);
+            this.comboBox7.TabIndex = 23;
+            // 
+            // comboBox8
+            // 
+            this.comboBox8.FormattingEnabled = true;
+            this.comboBox8.Location = new System.Drawing.Point(94, 349);
+            this.comboBox8.Name = "comboBox8";
+            this.comboBox8.Size = new System.Drawing.Size(197, 21);
+            this.comboBox8.TabIndex = 24;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdate.Location = new System.Drawing.Point(32, 29);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(91, 29);
+            this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.Text = "Add";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btndelete
+            // 
+            this.btndelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btndelete.Location = new System.Drawing.Point(129, 29);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(91, 29);
+            this.btndelete.TabIndex = 2;
+            this.btndelete.Text = "Delete";
+            this.btndelete.UseVisualStyleBackColor = true;
+            // 
             // add_subjects_race_types_person_types
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,6 +721,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblpersontypeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mount_NetsaiAcadamyDataSet4)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sub_class)).EndInit();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -494,5 +770,29 @@
         private Mount_NetsaiAcadamyDataSet4TableAdapters.Tbl_person_typeTableAdapter tbl_person_typeTableAdapter;
         private System.Windows.Forms.Label labelPersonType;
         private System.Windows.Forms.DataGridViewTextBoxColumn persontypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.DataGridView sub_class;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox Txtguid;
+        private System.Windows.Forms.Button btndelete;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

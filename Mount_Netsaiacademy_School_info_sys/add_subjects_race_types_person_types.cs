@@ -12,10 +12,11 @@ using System.Data.SqlClient;
 
 namespace Mount_Netsaiacademy_School_info_sys
 {
-     
+
 
     public partial class add_subjects_race_types_person_types : Form
     {
+        DataTable dt = new DataTable();
 
         String Constr = ConfigurationManager.ConnectionStrings["Mount_Netsaiacademy_School"].ConnectionString;
 
@@ -36,11 +37,11 @@ namespace Mount_Netsaiacademy_School_info_sys
 
         private void BtnADDsub_Click(object sender, EventArgs e)
         {
-            if(txtSubject.Text != "")
+            if (txtSubject.Text != "")
             {
                 SqlConnection con = new SqlConnection(Constr);
 
-                SqlCommand cmmd = new SqlCommand("select * from Subjects where Subject_name = '" + txtSubject.Text + "'" , con);
+                SqlCommand cmmd = new SqlCommand("select * from Subjects where Subject_name = '" + txtSubject.Text + "'", con);
                 SqlDataAdapter da = new SqlDataAdapter(cmmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -78,7 +79,7 @@ namespace Mount_Netsaiacademy_School_info_sys
                 {
                     MessageBox.Show("This subject already exists!");
                 }
-               
+
             }
 
             else
@@ -96,11 +97,73 @@ namespace Mount_Netsaiacademy_School_info_sys
             // TODO: This line of code loads data into the 'mount_NetsaiAcadamyDataSet2.subjects' table. You can move, or remove it, as needed.
             this.subjectsTableAdapter.Fill(this.mount_NetsaiAcadamyDataSet2.subjects);
 
+            SqlConnection con = new SqlConnection(Constr);
+            String pull_subject = "Subjectpull";
+            SqlCommand cmd = new SqlCommand(pull_subject, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+
+            try
+            {
+                con.Open();
+                SqlDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+
+                    comboBox1.Items.Add(rd["subject_name"].ToString());
+                    comboBox2.Items.Add(rd["subject_name"].ToString());
+                    comboBox3.Items.Add(rd["subject_name"].ToString());
+                    comboBox4.Items.Add(rd["subject_name"].ToString());
+                    comboBox5.Items.Add(rd["subject_name"].ToString());
+                    comboBox6.Items.Add(rd["subject_name"].ToString());
+                    comboBox7.Items.Add(rd["subject_name"].ToString());
+                    comboBox8.Items.Add(rd["subject_name"].ToString());
+
+
+                }
+                rd.Close();
+
+            }
+
+            catch (Exception ex)
+            {
+
+                throw new Exception("Execption Transfer of Querry Failed" + ex.Message);
+
+
+            }
+
+            finally
+            {
+                con.Close();
+            }
+
+
+
+            /// <summary>
+            /// //////////pull class details
+
+            SqlConnection conn = new SqlConnection(Constr);
+            SqlCommand Cmd = new SqlCommand("class_Sub_grid", conn);
+            Cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(Cmd);
+            da.Fill(dt);
+            sub_class.DataSource = dt;
+            this.sub_class.Columns["class_id"].Visible = false;
+            //classgrid.DataBind();
+
+            ///race pull
+
+
+            /// </summary>
+
+
         }
+
 
         private void buttonAddRace_Click(object sender, EventArgs e)
         {
-            if(textRace.Text == "")
+            if (textRace.Text == "")
             {
                 MessageBox.Show("Cannot add an empty string as a race");
             }
@@ -146,7 +209,7 @@ namespace Mount_Netsaiacademy_School_info_sys
                 {
                     MessageBox.Show("This race already exists!");
                 }
-            }            
+            }
         }
 
         private void buttonAddPersonType_Click(object sender, EventArgs e)
@@ -200,7 +263,169 @@ namespace Mount_Netsaiacademy_School_info_sys
                 }
             }
         }
-    }
-    }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
 
 
+        private void sub_class_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (sub_class.SelectedRows.Count > 0) // make sure user select at least 1 row 
+            {
+                //btnssign.Enabled = false;
+                btnUpdate.Enabled = true;
+                btndelete.Enabled = true;
+
+                string id = sub_class.SelectedRows[0].Cells[0].Value + string.Empty;
+                
+
+
+                Txtguid.Text = id;
+
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (Txtguid.Text == "") 
+            {
+
+                MessageBox.Show("Please select the class you want to add subjects to from the grid table", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
+            }
+
+
+            else if (comboBox1.Text == "")
+            {
+                MessageBox.Show("Please select atleast 5 subjects!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            else if (comboBox2.Text == "")
+            {
+                MessageBox.Show("Please select atleast 4 more subjects!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            else if (comboBox3.Text == "")
+            {
+                MessageBox.Show("Please select atleast 3 more subjects!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (comboBox4.Text == "")
+            {
+                MessageBox.Show("Please select atleast 2 more subjects!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+             /*///for testing purposes
+            else if (comboBox5.Text == "")
+            {
+                MessageBox.Show("Please select atleast 1 more subjects!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (comboBox6.Text == "")
+            {
+                MessageBox.Show("Please select an optional subjects!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+                */
+
+
+                /*///testing purposes
+            else if (comboBox1.Text == comboBox2.Text)
+            {
+                MessageBox.Show("Same subject has been picked multiple times please check!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (comboBox1.Text == comboBox2.Text)
+            {
+                MessageBox.Show("Same subject has been picked multiple times please check!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (comboBox2.Text == comboBox3.Text)
+            {
+                MessageBox.Show("Same subject has been picked multiple times please check!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (comboBox3.Text == comboBox4.Text)
+            {
+                MessageBox.Show("Same subject has been picked multiple times please check!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (comboBox4.Text == comboBox5.Text)
+            {
+                MessageBox.Show("Same subject has been picked multiple times please check!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+                
+            else if (comboBox5.Text == comboBox6.Text)
+            {
+                MessageBox.Show("Same subject has been picked multiple times please check!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (comboBox6.Text == comboBox7.Text)
+            {
+                MessageBox.Show("Same subject has been picked multiple times please check!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+          
+            else if (comboBox7.Text == comboBox8.Text)
+            {
+                MessageBox.Show("Same subject has been picked multiple times please check!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+                 *     * */
+
+
+            else
+            {
+                SqlConnection con = new SqlConnection(Constr);
+                String Update_class_subjects = "Update_class_Sub";
+                SqlCommand cmd = new SqlCommand(Update_class_subjects, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@classiD", Txtguid.Text.Trim());
+                cmd.Parameters.AddWithValue("@Sub1", comboBox1.Text.Trim());
+                cmd.Parameters.AddWithValue("@Sub2", comboBox2.Text.Trim());
+                cmd.Parameters.AddWithValue("@Sub3", comboBox3.Text.Trim());
+                cmd.Parameters.AddWithValue("@Sub4 ", comboBox4.Text.Trim());
+                cmd.Parameters.AddWithValue("@Sub5", comboBox5.Text.Trim());
+                cmd.Parameters.AddWithValue("@Sub6", comboBox6.Text.Trim());
+                cmd.Parameters.AddWithValue("@Sub7", comboBox7.Text.Trim());
+                cmd.Parameters.AddWithValue("@Sub8", comboBox8.Text.Trim());
+                try
+                {
+                    con.Open();
+
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Subjects have been asssigned to class ", "successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    comboBox1.Text = "";
+                    comboBox2.Text = "";
+                    comboBox3.Text = "";
+                    comboBox4.Text = "";
+                    comboBox5.Text = "";
+                    comboBox6.Text = "";
+                    comboBox7.Text = "";
+                    comboBox8.Text = "";
+
+                    SqlCommand Cmd = new SqlCommand("class_Sub_grid", con);
+                    Cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataAdapter da = new SqlDataAdapter(Cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    sub_class.DataSource = dt;
+                }
+
+                catch (Exception ex)
+                {
+
+                    throw new Exception("Execption Transfer of Querry Failed" + ex.Message);
+
+
+                }
+
+                finally
+                {
+                    con.Close();
+                }
+
+            }
+        }
+    }
+
+}

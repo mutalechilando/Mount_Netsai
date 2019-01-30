@@ -31,7 +31,7 @@ namespace Mount_Netsaiacademy_School_info_sys
         private void Edit_Student_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'mount_NetsaiAcadamyDataSet5.Tbl_Students' table. You can move, or remove it, as needed.
-            this.tbl_StudentsTableAdapter.Fill(this.mount_NetsaiAcadamyDataSet5.Tbl_Students);
+            //this.tbl_StudentsTableAdapter.Fill(this.mount_NetsaiAcadamyDataSet5.Tbl_Students);
             SqlConnection conn = new SqlConnection(Constr);
             SqlCommand Cmd = new SqlCommand("student_grid", conn);
             Cmd.CommandType = CommandType.StoredProcedure;
@@ -63,6 +63,7 @@ namespace Mount_Netsaiacademy_School_info_sys
                 {
 
                     cmb_grade.Items.Add(rd["grade"].ToString());
+                    cmbgrade.Items.Add(rd["grade"].ToString());
 
 
                 }
@@ -81,6 +82,13 @@ namespace Mount_Netsaiacademy_School_info_sys
             finally
             {
                 con.Close();
+            }
+
+
+
+            for (int i = 2007; i <= DateTime.Now.Year; i++)
+            {
+                cmbyearr.Items.Add(i.ToString());// pseudo
             }
 
         }
@@ -108,19 +116,14 @@ namespace Mount_Netsaiacademy_School_info_sys
                 //picbox_Student.Image = Student_Picture;
                 cmbstudentstatus.Text = Student_number;
                 txtfee_amount.Text = fee_amount;
-                txtgrade.Text = grade;
+                cmbgrade.Text = grade;
                 txtteacher.Text = class_Teacher;
-                txtYear.Text = Year;
+                cmbyearr.Text = Year;
                 dtpenrollment.Text = enrollment_date;
                 txtStudent_number.Text = Student_number;
                 cmbstudentstatus.Text = Student_status;
                 txtperson_id.Text = person_id;
             }
-
-        }
-
-        private void cmbyear_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -342,6 +345,64 @@ namespace Mount_Netsaiacademy_School_info_sys
             {
                 con.Close();
             }
+        }
+
+        private void grideditstud_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void cmbgrade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(Constr);
+            String pull_classdetails = "pullclassdetials";
+            SqlCommand cmd = new SqlCommand(pull_classdetails, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@grade", cmbgrade.Text);
+
+            try
+            {
+                con.Open();
+                SqlDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+
+                    txtfee_amount.Text = rd["fee_amount"].ToString();
+                    //txtclassid.Text = rd["class_id"].ToString();
+                    cmbyearr.Text = rd["class_Year"].ToString();
+                    txtteacher.Text = rd["class_teacher"].ToString();
+
+
+
+                }
+                rd.Close();
+
+            }
+
+            catch (Exception ex)
+            {
+
+                throw new Exception("Execption Transfer of Querry Failed" + ex.Message);
+
+
+            }
+
+            finally
+            {
+                con.Close();
+            }
+           
+        }
+
+        private void cmbyearr_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void txtteacher_TextChanged(object sender, EventArgs e)
+        {
+
         }
            
         }

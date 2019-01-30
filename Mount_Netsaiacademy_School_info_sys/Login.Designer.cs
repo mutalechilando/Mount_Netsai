@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtfullnames = new System.Windows.Forms.TextBox();
             this.pictureLock = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -50,6 +51,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtfullnames);
             this.groupBox1.Controls.Add(this.pictureLock);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
@@ -65,6 +67,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txtfullnames
+            // 
+            this.txtfullnames.Location = new System.Drawing.Point(112, 127);
+            this.txtfullnames.Name = "txtfullnames";
+            this.txtfullnames.Size = new System.Drawing.Size(143, 20);
+            this.txtfullnames.TabIndex = 9;
+            this.txtfullnames.Visible = false;
             // 
             // pictureLock
             // 
@@ -99,7 +110,7 @@
             // btnLogin
             // 
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogin.Location = new System.Drawing.Point(251, 115);
+            this.btnLogin.Location = new System.Drawing.Point(261, 115);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(153, 42);
             this.btnLogin.TabIndex = 5;
@@ -139,6 +150,7 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(302, 20);
             this.txtUserName.TabIndex = 1;
+            this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
             // 
             // txtPassword
             // 
@@ -249,5 +261,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureLock;
+        private System.Windows.Forms.TextBox txtfullnames;
     }
 }

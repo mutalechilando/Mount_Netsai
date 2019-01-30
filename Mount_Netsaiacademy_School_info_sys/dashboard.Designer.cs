@@ -48,6 +48,8 @@
             this.classManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.lblGreetings = new System.Windows.Forms.Label();
+            this.lblnames = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             this.administratorToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1524, 93);
+            this.menuStrip1.Size = new System.Drawing.Size(1600, 93);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -117,12 +119,14 @@
             this.enterStudentsExamPerformanceToolStripMenuItem.Name = "enterStudentsExamPerformanceToolStripMenuItem";
             this.enterStudentsExamPerformanceToolStripMenuItem.Size = new System.Drawing.Size(255, 22);
             this.enterStudentsExamPerformanceToolStripMenuItem.Text = "Enter Students Exam Performance ";
+            this.enterStudentsExamPerformanceToolStripMenuItem.Click += new System.EventHandler(this.enterStudentsExamPerformanceToolStripMenuItem_Click);
             // 
             // veiwStudeentPerfomanceToolStripMenuItem
             // 
             this.veiwStudeentPerfomanceToolStripMenuItem.Name = "veiwStudeentPerfomanceToolStripMenuItem";
             this.veiwStudeentPerfomanceToolStripMenuItem.Size = new System.Drawing.Size(255, 22);
-            this.veiwStudeentPerfomanceToolStripMenuItem.Text = "Veiw Studee=nt Perfomance";
+            this.veiwStudeentPerfomanceToolStripMenuItem.Text = "Veiw Student Perfomance";
+            this.veiwStudeentPerfomanceToolStripMenuItem.Click += new System.EventHandler(this.veiwStudeentPerfomanceToolStripMenuItem_Click);
             // 
             // studentsFeesStatusToolStripMenuItem
             // 
@@ -140,6 +144,7 @@
             this.checkStudentFeesToolStripMenuItem.Name = "checkStudentFeesToolStripMenuItem";
             this.checkStudentFeesToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.checkStudentFeesToolStripMenuItem.Text = "Check Student Fees";
+            this.checkStudentFeesToolStripMenuItem.Click += new System.EventHandler(this.checkStudentFeesToolStripMenuItem_Click);
             // 
             // humanResourseToolStripMenuItem
             // 
@@ -228,7 +233,7 @@
             // 
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogout.Image = global::Mount_Netsaiacademy_School_info_sys.Properties.Resources._5102263421;
-            this.btnLogout.Location = new System.Drawing.Point(1432, 20);
+            this.btnLogout.Location = new System.Drawing.Point(1518, 19);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(53, 53);
@@ -236,11 +241,33 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // lblGreetings
+            // 
+            this.lblGreetings.AutoSize = true;
+            this.lblGreetings.Font = new System.Drawing.Font("Monotype Corsiva", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGreetings.Location = new System.Drawing.Point(917, 33);
+            this.lblGreetings.Name = "lblGreetings";
+            this.lblGreetings.Size = new System.Drawing.Size(133, 22);
+            this.lblGreetings.TabIndex = 11;
+            this.lblGreetings.Text = "GREETINGS  :";
+            // 
+            // lblnames
+            // 
+            this.lblnames.AutoSize = true;
+            this.lblnames.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnames.Location = new System.Drawing.Point(1100, 33);
+            this.lblnames.Name = "lblnames";
+            this.lblnames.Size = new System.Drawing.Size(131, 21);
+            this.lblnames.TabIndex = 12;
+            this.lblnames.Text = "Teacher name";
+            // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1524, 913);
+            this.ClientSize = new System.Drawing.Size(1600, 913);
+            this.Controls.Add(this.lblnames);
+            this.Controls.Add(this.lblGreetings);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -277,6 +304,8 @@
         public System.Windows.Forms.ToolStripMenuItem configurationsToolStripMenuItem;
         public System.Windows.Forms.Button btnLogout;
         public System.Windows.Forms.ToolStripMenuItem classManagementToolStripMenuItem;
+        private System.Windows.Forms.Label lblGreetings;
+        private System.Windows.Forms.Label lblnames;
     }
 }
 

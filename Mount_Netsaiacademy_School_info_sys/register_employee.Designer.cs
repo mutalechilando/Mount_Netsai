@@ -30,6 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtemptype = new System.Windows.Forms.TextBox();
+            this.Txt_NRC = new System.Windows.Forms.MaskedTextBox();
+            this.dtp_employment_date = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtdayspermonth = new System.Windows.Forms.TextBox();
+            this.Marital_Status = new System.Windows.Forms.ComboBox();
+            this.btncancel = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.txtAge = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbdisability = new System.Windows.Forms.ComboBox();
@@ -52,17 +63,6 @@
             this.txtFname = new System.Windows.Forms.TextBox();
             this.tbl_raceTableAdapter = new Mount_Netsaiacademy_School_info_sys.Mount_NetsaiAcadamyDataSetTableAdapters.Tbl_raceTableAdapter();
             this.tbl_person_typeTableAdapter = new Mount_Netsaiacademy_School_info_sys.Mount_NetsaiAcadamyDataSet1TableAdapters.Tbl_person_typeTableAdapter();
-            this.Txt_NRC = new System.Windows.Forms.MaskedTextBox();
-            this.dtp_employment_date = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtdayspermonth = new System.Windows.Forms.TextBox();
-            this.Marital_Status = new System.Windows.Forms.ComboBox();
-            this.btncancel = new System.Windows.Forms.Button();
-            this.btnRegister = new System.Windows.Forms.Button();
-            this.txtemptype = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblraceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mount_NetsaiAcadamyDataSet)).BeginInit();
@@ -105,6 +105,113 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Register_Employee";
+            // 
+            // txtemptype
+            // 
+            this.txtemptype.Location = new System.Drawing.Point(656, 19);
+            this.txtemptype.Name = "txtemptype";
+            this.txtemptype.Size = new System.Drawing.Size(36, 20);
+            this.txtemptype.TabIndex = 38;
+            this.txtemptype.Text = "1";
+            this.txtemptype.Visible = false;
+            this.txtemptype.TextChanged += new System.EventHandler(this.txtemptype_TextChanged);
+            // 
+            // Txt_NRC
+            // 
+            this.Txt_NRC.Location = new System.Drawing.Point(100, 280);
+            this.Txt_NRC.Mask = "000000\\/00\\/0";
+            this.Txt_NRC.Name = "Txt_NRC";
+            this.Txt_NRC.Size = new System.Drawing.Size(217, 20);
+            this.Txt_NRC.TabIndex = 37;
+            // 
+            // dtp_employment_date
+            // 
+            this.dtp_employment_date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_employment_date.Location = new System.Drawing.Point(462, 326);
+            this.dtp_employment_date.Name = "dtp_employment_date";
+            this.dtp_employment_date.Size = new System.Drawing.Size(230, 20);
+            this.dtp_employment_date.TabIndex = 36;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(354, 330);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(93, 13);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Employment Date:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(364, 280);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(77, 13);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "Marital Status :";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(9, 326);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(85, 13);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "days per month :";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(42, 280);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(30, 13);
+            this.label9.TabIndex = 32;
+            this.label9.Text = "Nrc :";
+            // 
+            // txtdayspermonth
+            // 
+            this.txtdayspermonth.Enabled = false;
+            this.txtdayspermonth.Location = new System.Drawing.Point(100, 324);
+            this.txtdayspermonth.Name = "txtdayspermonth";
+            this.txtdayspermonth.Size = new System.Drawing.Size(44, 20);
+            this.txtdayspermonth.TabIndex = 31;
+            // 
+            // Marital_Status
+            // 
+            this.Marital_Status.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Marital_Status.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Marital_Status.FormattingEnabled = true;
+            this.Marital_Status.Items.AddRange(new object[] {
+            "Single",
+            "Devosed",
+            "married",
+            "Widowed",
+            "Separeted"});
+            this.Marital_Status.Location = new System.Drawing.Point(462, 278);
+            this.Marital_Status.Name = "Marital_Status";
+            this.Marital_Status.Size = new System.Drawing.Size(230, 21);
+            this.Marital_Status.TabIndex = 30;
+            // 
+            // btncancel
+            // 
+            this.btncancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btncancel.Location = new System.Drawing.Point(496, 400);
+            this.btncancel.Name = "btncancel";
+            this.btncancel.Size = new System.Drawing.Size(160, 35);
+            this.btncancel.TabIndex = 29;
+            this.btncancel.Text = "Cancel";
+            this.btncancel.UseVisualStyleBackColor = true;
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegister.Location = new System.Drawing.Point(100, 400);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(160, 35);
+            this.btnRegister.TabIndex = 28;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // txtAge
             // 
@@ -292,113 +399,6 @@
             // tbl_person_typeTableAdapter
             // 
             this.tbl_person_typeTableAdapter.ClearBeforeFill = true;
-            // 
-            // Txt_NRC
-            // 
-            this.Txt_NRC.Location = new System.Drawing.Point(100, 280);
-            this.Txt_NRC.Mask = "000000\\/00\\/0";
-            this.Txt_NRC.Name = "Txt_NRC";
-            this.Txt_NRC.Size = new System.Drawing.Size(217, 20);
-            this.Txt_NRC.TabIndex = 37;
-            // 
-            // dtp_employment_date
-            // 
-            this.dtp_employment_date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_employment_date.Location = new System.Drawing.Point(462, 326);
-            this.dtp_employment_date.Name = "dtp_employment_date";
-            this.dtp_employment_date.Size = new System.Drawing.Size(230, 20);
-            this.dtp_employment_date.TabIndex = 36;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(354, 330);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(93, 13);
-            this.label12.TabIndex = 35;
-            this.label12.Text = "Employment Date:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(364, 280);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(77, 13);
-            this.label11.TabIndex = 34;
-            this.label11.Text = "Marital Status :";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 326);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(85, 13);
-            this.label10.TabIndex = 33;
-            this.label10.Text = "days per month :";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(42, 280);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 13);
-            this.label9.TabIndex = 32;
-            this.label9.Text = "Nrc :";
-            // 
-            // txtdayspermonth
-            // 
-            this.txtdayspermonth.Enabled = false;
-            this.txtdayspermonth.Location = new System.Drawing.Point(100, 324);
-            this.txtdayspermonth.Name = "txtdayspermonth";
-            this.txtdayspermonth.Size = new System.Drawing.Size(44, 20);
-            this.txtdayspermonth.TabIndex = 31;
-            // 
-            // Marital_Status
-            // 
-            this.Marital_Status.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.Marital_Status.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Marital_Status.FormattingEnabled = true;
-            this.Marital_Status.Items.AddRange(new object[] {
-            "Single",
-            "Marriade",
-            "Divosed",
-            "Widowed",
-            "Separeted"});
-            this.Marital_Status.Location = new System.Drawing.Point(462, 278);
-            this.Marital_Status.Name = "Marital_Status";
-            this.Marital_Status.Size = new System.Drawing.Size(230, 21);
-            this.Marital_Status.TabIndex = 30;
-            // 
-            // btncancel
-            // 
-            this.btncancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btncancel.Location = new System.Drawing.Point(496, 400);
-            this.btncancel.Name = "btncancel";
-            this.btncancel.Size = new System.Drawing.Size(160, 35);
-            this.btncancel.TabIndex = 29;
-            this.btncancel.Text = "Cancel";
-            this.btncancel.UseVisualStyleBackColor = true;
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRegister.Location = new System.Drawing.Point(100, 400);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(160, 35);
-            this.btnRegister.TabIndex = 28;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
-            // 
-            // txtemptype
-            // 
-            this.txtemptype.Location = new System.Drawing.Point(656, 19);
-            this.txtemptype.Name = "txtemptype";
-            this.txtemptype.Size = new System.Drawing.Size(36, 20);
-            this.txtemptype.TabIndex = 38;
-            this.txtemptype.Text = "1";
-            this.txtemptype.Visible = false;
-            this.txtemptype.TextChanged += new System.EventHandler(this.txtemptype_TextChanged);
             // 
             // register_employee
             // 

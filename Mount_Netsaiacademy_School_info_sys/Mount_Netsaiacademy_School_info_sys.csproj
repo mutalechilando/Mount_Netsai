@@ -31,6 +31,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -74,6 +78,12 @@
     </Compile>
     <Compile Include="dashboard.Designer.cs">
       <DependentUpon>dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance.Designer.cs">
+      <DependentUpon>Finance.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -119,6 +129,12 @@
     <Compile Include="register_employee.Designer.cs">
       <DependentUpon>register_employee.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentPrerfomance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentPrerfomance.Designer.cs">
+      <DependentUpon>StudentPrerfomance.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentRegistration .cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +156,9 @@
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Finance.resx">
+      <DependentUpon>Finance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +174,9 @@
     </Compile>
     <EmbeddedResource Include="register_employee.resx">
       <DependentUpon>register_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentPrerfomance.resx">
+      <DependentUpon>StudentPrerfomance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentRegistration .resx">
       <DependentUpon>StudentRegistration .cs</DependentUpon>

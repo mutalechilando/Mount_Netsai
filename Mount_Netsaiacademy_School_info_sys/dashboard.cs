@@ -19,6 +19,7 @@ namespace Mount_Netsaiacademy_School_info_sys
     public partial class dashboard : Form
     {
 
+        public static string teachername;
         public dashboard()
         {
             InitializeComponent();
@@ -138,9 +139,57 @@ namespace Mount_Netsaiacademy_School_info_sys
             
 
         }
+     
 
         private void dashboard_Load(object sender, EventArgs e)
         {
+            lblnames.Text = Login.type;
+            teachername = lblnames.Text;
+            if (DateTime.Now.Hour < 12) 
+            {
+
+                lblGreetings.Text = "Good Morning";
+            
+            }
+            else if (DateTime.Now.Hour < 17)
+            {
+
+                lblGreetings.Text = "Good Afternoon";
+            
+            }
+
+            else
+            {
+                lblGreetings.Text = "Good Evening";
+            }
+        }
+
+        private void veiwStudeentPerfomanceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void enterStudentsExamPerformanceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            StudentPrerfomance Addresults = new StudentPrerfomance();
+            Addresults.TopLevel = false;
+            Addresults.Dock = DockStyle.Fill;
+            Addresults.Parent = panel1;
+            Addresults.Size = panel1.Size;
+            Addresults.Show();
+
+        }
+
+        private void checkStudentFeesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            Finance StudentFees = new Finance();
+            StudentFees.TopLevel = false;
+            StudentFees.Dock = DockStyle.Fill;
+            StudentFees.Parent = panel1;
+            StudentFees.Size = panel1.Size;
+            StudentFees.Show();
 
         }
     }

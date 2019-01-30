@@ -15,19 +15,23 @@ namespace Mount_Netsaiacademy_School_info_sys
 {
     public partial class Login : Form
     {
-
+       
         String Constr = ConfigurationManager.ConnectionStrings["Mount_Netsaiacademy_School"].ConnectionString;
-
+        public static string userName;
+        public static string type;
+        public static string position;
+        
         public Login()
         {
             InitializeComponent();
+            this.ActiveControl = txtUserName;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string userName = txtUserName.Text;
             string password = txtPassword.Text;
-
+            string title = txtemptitle.Text;
             string passwordHash = MD5Hash(password);
 
             //string password = passwordHash.To
@@ -57,6 +61,9 @@ namespace Mount_Netsaiacademy_School_info_sys
                     if (rd.Read())
                     {
                         txtemptitle.Text = rd["emp_title"].ToString();
+                        txtfullnames.Text = rd["fullnames"].ToString();
+                        type = txtfullnames.Text;
+                        position = txtemptitle.Text;
                         var emp_title = rd["emp_title"].ToString();
 
                         if (emp_title.Equals("Manager"))
@@ -119,6 +126,16 @@ namespace Mount_Netsaiacademy_School_info_sys
                 hash.Append(bytes[i].ToString("x2"));
             }
             return hash.ToString();
+        }
+
+        public void txtUserName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
 
 
