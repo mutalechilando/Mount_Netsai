@@ -248,7 +248,7 @@ namespace Mount_Netsaiacademy_School_info_sys
                 cmd.Parameters.AddWithValue("@class_teacher", txtclassteacher.Text.Trim());
                 cmd.Parameters.AddWithValue("@class_year", txtyear.Text.Trim());
                 cmd.Parameters.AddWithValue("@Class_id", txtclassid.Text.Trim());
-                cmd.Parameters.AddWithValue("@amountpaid", txtamountpayed.Text.Trim());
+                //cmd.Parameters.AddWithValue("@amountpaid", txtamountpayed.Text.Trim());
 
                 try
                 {

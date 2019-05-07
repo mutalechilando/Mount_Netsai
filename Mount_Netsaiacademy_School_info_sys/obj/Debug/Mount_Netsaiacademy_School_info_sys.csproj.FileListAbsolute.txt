@@ -87,3 +87,21 @@ C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\New folder (2)\Mount_Ne
 C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\New folder (2)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.csprojResolveAssemblyReference.cache
 C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\New folder (2)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.StudentPrerfomance.resources
 C:\Users\ckangombe\Documents\Visual Studio 2013\Projects\New folder (2)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.Finance.resources
+C:\Users\mchilando\Downloads\Mount_Netsai (1)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\bin\Debug\Mount_Netsaiacademy_School_info_sys.exe.config
+C:\Users\mchilando\Downloads\Mount_Netsai (1)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.exe
+C:\Users\mchilando\Downloads\Mount_Netsai (1)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.pdb
+C:\Users\mchilando\Downloads\Mount_Netsai (1)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\bin\Debug\Mount_Netsaiacademy_School_info_sys.exe
+C:\Users\mchilando\Downloads\Mount_Netsai (1)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\bin\Debug\Mount_Netsaiacademy_School_info_sys.pdb
+C:\Users\mchilando\Downloads\Mount_Netsai (1)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.csprojResolveAssemblyReference.cache
+C:\Users\mchilando\Downloads\Mount_Netsai (1)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.add_subjects_race_types_person_types.resources
+C:\Users\mchilando\Downloads\Mount_Netsai (1)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.Class_Managment.resources
+C:\Users\mchilando\Downloads\Mount_Netsai (1)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.CreateUser.resources
+C:\Users\mchilando\Downloads\Mount_Netsai (1)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.Edit_Student.resources
+C:\Users\mchilando\Downloads\Mount_Netsai (1)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.dashboard.resources
+C:\Users\mchilando\Downloads\Mount_Netsai (1)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.Finance.resources
+C:\Users\mchilando\Downloads\Mount_Netsai (1)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.Login.resources
+C:\Users\mchilando\Downloads\Mount_Netsai (1)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.Properties.Resources.resources
+C:\Users\mchilando\Downloads\Mount_Netsai (1)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.register_employee.resources
+C:\Users\mchilando\Downloads\Mount_Netsai (1)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.StudentPrerfomance.resources
+C:\Users\mchilando\Downloads\Mount_Netsai (1)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.StudentRegistration.resources
+C:\Users\mchilando\Downloads\Mount_Netsai (1)\Mount_Netsai\Mount_Netsaiacademy_School_info_sys\obj\Debug\Mount_Netsaiacademy_School_info_sys.csproj.GenerateResource.Cache

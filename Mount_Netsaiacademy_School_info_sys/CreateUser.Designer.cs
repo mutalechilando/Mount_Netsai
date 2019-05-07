@@ -78,7 +78,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(437, 37);
+            this.label5.Location = new System.Drawing.Point(432, 16);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 13);
@@ -91,7 +91,7 @@
             this.dataGridViewUsers.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewUsers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUsers.Location = new System.Drawing.Point(435, 63);
+            this.dataGridViewUsers.Location = new System.Drawing.Point(426, 33);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.Size = new System.Drawing.Size(344, 595);
             this.dataGridViewUsers.TabIndex = 2;
@@ -101,7 +101,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 38);
+            this.label4.Location = new System.Drawing.Point(5, 16);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 13);
@@ -115,7 +115,7 @@
             this.dataGridViewEmployees.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewEmployees.GridColor = System.Drawing.Color.White;
-            this.dataGridViewEmployees.Location = new System.Drawing.Point(6, 63);
+            this.dataGridViewEmployees.Location = new System.Drawing.Point(6, 33);
             this.dataGridViewEmployees.Name = "dataGridViewEmployees";
             this.dataGridViewEmployees.Size = new System.Drawing.Size(402, 595);
             this.dataGridViewEmployees.TabIndex = 0;

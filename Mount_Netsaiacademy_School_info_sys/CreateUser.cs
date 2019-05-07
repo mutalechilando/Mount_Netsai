@@ -200,7 +200,7 @@ namespace Mount_Netsaiacademy_School_info_sys
 
             if (txtEmpName.Text == "")
             {
-                MessageBox.Show("Please select an Employee and press the arrow to add the employee as a user!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select an Employee and enter their particulars to add as a user!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             else if (txtEmpTitle.Text == "")
@@ -228,6 +228,7 @@ namespace Mount_Netsaiacademy_School_info_sys
                 MessageBox.Show("Password confirmation failed!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
+
             else
             {
                 SqlConnection con = new SqlConnection(Constr);
@@ -244,9 +245,22 @@ namespace Mount_Netsaiacademy_School_info_sys
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
+                //check if user name exists
+                string chkuser = "select * from Tbl_Login where user_name ='" + txtUserName.Text.Trim() + "'";
+                SqlCommand cm1 = new SqlCommand(chkuser, con);
+
+                SqlDataAdapter da1 = new SqlDataAdapter(cm1);
+                DataTable dt1 = new DataTable();
+                da1.Fill(dt1);
+
                 if (dt.Rows.Count > 0)
                 {
                     MessageBox.Show("This Employees is already a user, Please add a different Employee", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                else if (dt1.Rows.Count > 0)
+                {
+                    MessageBox.Show("This user name already exists, Please add a different user name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 else
