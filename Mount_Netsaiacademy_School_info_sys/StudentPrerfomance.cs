@@ -11,6 +11,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.IO;
 using System.Globalization;
+using System.Windows.Forms.VisualStyles;
 
 namespace Mount_Netsaiacademy_School_info_sys
 {
@@ -68,8 +69,8 @@ namespace Mount_Netsaiacademy_School_info_sys
             SqlDataAdapter da = new SqlDataAdapter(Cmd);
             da.Fill(dt);
             gridperfomance.DataSource = dt;
-            this.gridperfomance.Columns["person_id"].Visible = false;
-            this.gridperfomance.Columns["Class_id"].Visible = false;
+            this.gridperfomance.Columns["person_id"].Visible = true;
+            this.gridperfomance.Columns["Class_id"].Visible = true;
             this.gridperfomance.Columns["Student_Picture"].Visible = false;
             this.gridperfomance.Columns["fee_amount"].Visible = false;
 
@@ -124,7 +125,8 @@ namespace Mount_Netsaiacademy_School_info_sys
                 string Sub8 = gridperfomance.SelectedRows[0].Cells[16].Value + string.Empty;
                 string Year = gridperfomance.SelectedRows[0].Cells[8].Value + string.Empty;
                 //string Student_status = gridperfomance.SelectedRows[0].Cells[2].Value + string.Empty;
-               // string person_id = gridperfomance.SelectedRows[0].Cells[10].Value + string.Empty;
+                string person_id = gridperfomance.SelectedRows[0].Cells["person_id"].Value + string.Empty;
+                string class_id = gridperfomance.SelectedRows[0].Cells["Class_id"].Value + string.Empty;
 
                 txtfullnames.Text = Full_Names;
                 txtstudNo.Text = Student_number;
@@ -139,9 +141,11 @@ namespace Mount_Netsaiacademy_School_info_sys
                 textsub7.Text = Sub7;
                 textsub8.Text = Sub8;
                 txtyear.Text = Year;
+                txtClassGuid.Text = class_id;
+                txtStudentGuid.Text = person_id;
 
-              
-                
+
+
             }
 
            
@@ -276,6 +280,147 @@ namespace Mount_Netsaiacademy_School_info_sys
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnpostresorts_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(Constr);
+
+            if (!string.IsNullOrEmpty(textsub1.Text) && !string.IsNullOrEmpty(textBox13.Text))
+            {
+                String Add_Test_Results = "Add_Test_Results";
+                SqlCommand cmd = new SqlCommand(Add_Test_Results, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@personId",Guid.Parse(txtStudentGuid.Text));
+                cmd.Parameters.AddWithValue("@classId", Guid.Parse(txtClassGuid.Text));
+                cmd.Parameters.AddWithValue("@term",comboterm.Text);
+                cmd.Parameters.AddWithValue("@classSubject",textsub1.Text.Trim());
+                cmd.Parameters.AddWithValue("@results", textBox13.Text);
+                cmd.Parameters.AddWithValue("@studentNo", txtstudNo.Text);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            if (!string.IsNullOrEmpty(textsub2.Text) && !string.IsNullOrEmpty(textBox14.Text))
+            {
+                String Add_Test_Results = "Add_Test_Results";
+                SqlCommand cmd = new SqlCommand(Add_Test_Results, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@personId", Guid.Parse(txtStudentGuid.Text));
+                cmd.Parameters.AddWithValue("@classId", Guid.Parse(txtClassGuid.Text));
+                cmd.Parameters.AddWithValue("@term", comboterm.Text);
+                cmd.Parameters.AddWithValue("@classSubject", textsub2.Text.Trim());
+                cmd.Parameters.AddWithValue("@results", textBox14.Text);
+                cmd.Parameters.AddWithValue("@studentNo", txtstudNo.Text);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            if (!string.IsNullOrEmpty(textsub3.Text) && !string.IsNullOrEmpty(textBox15.Text))
+            {
+                String Add_Test_Results = "Add_Test_Results";
+                SqlCommand cmd = new SqlCommand(Add_Test_Results, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@personId", Guid.Parse(txtStudentGuid.Text));
+                cmd.Parameters.AddWithValue("@classId", Guid.Parse(txtClassGuid.Text));
+                cmd.Parameters.AddWithValue("@term", comboterm.Text);
+                cmd.Parameters.AddWithValue("@classSubject", textsub3.Text.Trim());
+                cmd.Parameters.AddWithValue("@results", textBox15.Text);
+                cmd.Parameters.AddWithValue("@studentNo", txtstudNo.Text);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            if (!string.IsNullOrEmpty(textsub4.Text) && !string.IsNullOrEmpty(textBox16.Text))
+            {
+                String Add_Test_Results = "Add_Test_Results";
+                SqlCommand cmd = new SqlCommand(Add_Test_Results, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@personId", Guid.Parse(txtStudentGuid.Text));
+                cmd.Parameters.AddWithValue("@classId", Guid.Parse(txtClassGuid.Text));
+                cmd.Parameters.AddWithValue("@term", comboterm.Text);
+                cmd.Parameters.AddWithValue("@classSubject", textsub4.Text.Trim());
+                cmd.Parameters.AddWithValue("@results", textBox16.Text);
+                cmd.Parameters.AddWithValue("@studentNo", txtstudNo.Text);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            if (!string.IsNullOrEmpty(textsub5.Text) && !string.IsNullOrEmpty(textBox17.Text))
+            {
+                String Add_Test_Results = "Add_Test_Results";
+                SqlCommand cmd = new SqlCommand(Add_Test_Results, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@personId", Guid.Parse(txtStudentGuid.Text));
+                cmd.Parameters.AddWithValue("@classId", Guid.Parse(txtClassGuid.Text));
+                cmd.Parameters.AddWithValue("@term", comboterm.Text);
+                cmd.Parameters.AddWithValue("@classSubject", textsub5.Text.Trim());
+                cmd.Parameters.AddWithValue("@results", textBox17.Text);
+                cmd.Parameters.AddWithValue("@studentNo", txtstudNo.Text);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            if (!string.IsNullOrEmpty(textsub6.Text) && !string.IsNullOrEmpty(textBox18.Text))
+            {
+                String Add_Test_Results = "Add_Test_Results";
+                SqlCommand cmd = new SqlCommand(Add_Test_Results, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@personId", Guid.Parse(txtStudentGuid.Text));
+                cmd.Parameters.AddWithValue("@classId", Guid.Parse(txtClassGuid.Text));
+                cmd.Parameters.AddWithValue("@term", comboterm.Text);
+                cmd.Parameters.AddWithValue("@classSubject", textsub6.Text.Trim());
+                cmd.Parameters.AddWithValue("@results", textBox18.Text);
+                cmd.Parameters.AddWithValue("@studentNo", txtstudNo.Text);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            if (!string.IsNullOrEmpty(textsub7.Text) && !string.IsNullOrEmpty(textBox19.Text))
+            {
+                String Add_Test_Results = "Add_Test_Results";
+                SqlCommand cmd = new SqlCommand(Add_Test_Results, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@personId", Guid.Parse(txtStudentGuid.Text));
+                cmd.Parameters.AddWithValue("@classId", Guid.Parse(txtClassGuid.Text));
+                cmd.Parameters.AddWithValue("@term", comboterm.Text);
+                cmd.Parameters.AddWithValue("@classSubject", textsub7.Text.Trim());
+                cmd.Parameters.AddWithValue("@results", textBox19.Text);
+                cmd.Parameters.AddWithValue("@studentNo", txtstudNo.Text);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            if (!string.IsNullOrEmpty(textsub8.Text) && !string.IsNullOrEmpty(textBox20.Text))
+            {
+                String Add_Test_Results = "Add_Test_Results";
+                SqlCommand cmd = new SqlCommand(Add_Test_Results, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@personId", Guid.Parse(txtStudentGuid.Text));
+                cmd.Parameters.AddWithValue("@classId", Guid.Parse(txtClassGuid.Text));
+                cmd.Parameters.AddWithValue("@term", comboterm.Text);
+                cmd.Parameters.AddWithValue("@classSubject", textsub8.Text.Trim());
+                cmd.Parameters.AddWithValue("@results", textBox20.Text);
+                cmd.Parameters.AddWithValue("@studentNo", txtstudNo.Text);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
         }
     }
 }
